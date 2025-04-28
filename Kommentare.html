@@ -38,6 +38,59 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
-    <script src="kommentare.js"></script>
+    <!-- Hier dein eigenes JavaScript -->
+    <script>
+        // Firebase-Konfiguration (ersetzen durch deine eigenen Daten)
+        const firebaseConfig = {
+            apiKey: "DEIN_API_KEY",
+            authDomain: "DEIN_PROJECT_ID.firebaseapp.com",
+            databaseURL: "https://DEIN_PROJECT_ID-default-rtdb.firebaseio.com",
+            projectId: "DEIN_PROJECT_ID",
+            storageBucket: "DEIN_PROJECT_ID.appspot.com",
+            messagingSenderId: "DEINE_SENDER_ID",
+            appId: "DEINE_APP_ID"
+        };
+
+        // Firebase starten
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        // Kommentar laden
+        function ladeKommentare() {
+            const commentsSection = document.getElementById('commentsSection');
+            db.ref('kommentare').orderByChild('timestamp').limitToLast(100).on('value', snapshot => {
+                commentsSection.innerHTML = '';
+                let comments = [];
+                snapshot.forEach(childSnapshot => {
+                    comments.push(childSnapshot.val().text);
+                });
+                comments.reverse(); // Neueste zuerst
+                comments.forEach(text => {
+                    const div = document.createElement('div');
+                    div.className = 'comment';
+                    div.textContent = text;
+                    commentsSection.appendChild(div);
+                });
+            });
+        }
+
+        // Kommentar abschicken
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = document.getElementById('commentInput');
+            const text = input.value.trim();
+            if (text) {
+                db.ref('kommentare').push({
+                    text: text,
+                    timestamp: Date.now()
+                });
+                input.value = '';
+            }
+        });
+
+        // Seite lädt
+        window.onload = ladeKommentare;
+    </script>
 </body>
 </html>
+
