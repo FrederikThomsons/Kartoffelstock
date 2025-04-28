@@ -1,0 +1,376 @@
+/* Allgemeine Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px; /* Größerer Titel */
+    color: white; /* Weißer Titel */
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Menü und Header */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Kärtchen-Container */
+.kärtchen-container, .ordner, .film-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Deine bisherigen Styles unten */
+.kärtchen, .ordner button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.kärtchen:hover, .ordner button:hover {
+    background-color: #45a049;
+}
+
+.ordner-info {
+    display: none;
+}
+
+.film {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.zurueck-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.zurueck-button:hover {
+    background-color: #005fa3;
+}
+
+.zeichnungsbereich {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.zeichnungsbereich img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.zeichnungsbereich p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Ändere die film-list, damit die Filme untereinander angeordnet werden */
+.film-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Styles für jeden Film-Container */
+.film {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Video in einer moderaten Größe */
+.film video {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* Optional: Video- und Textbeschreibungen etwas stilisieren */
+.film h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.film p {
+    font-size: 1em;
+    color: #555;
+}
+
+.kunst-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 20px;
+}
+
+.kunst {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kunst h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.ordner-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ordner-button:hover {
+    background-color: #45a049;
+}
+
+/* Menü und Header */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+header h1 {
+    font-size: 48px; /* Größerer Titel */
+    color: white; /* Weißer Titel */
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Bildanzeige */
+.bild-container {
+    position: relative;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.bild-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.navigation {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.navigation button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.navigation button:hover {
+    background-color: rgba(200, 200, 200, 0.9);
+}
+
+.bild-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Kärtchen-Container */
+.kärtchen-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.kärtchen {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.kärtchen:hover {
+    background-color: #45a049;
+}
+
+/* Info zu Kärtchen */
+.info {
+    display: none;
+}
+
+.header-bereich {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.zurueck-button {
+    margin-bottom: 20px; /* Abstand nach unten */
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.zurueck-button:hover {
+    background-color: #005fa3;
+}
+
+.header-bereich h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    color: #333;
+}
+
+.header-bereich p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 20px;
+}

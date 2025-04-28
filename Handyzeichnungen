@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Handyzeichnungen</title>
+  <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+
+  <div class="header-bereich">
+    <a href="kunst.html" class="zurueck-button">Zurück zur Kunstseite</a>
+  
+    <h1>Per Handy</h1>
+    <p>Alles hier ist per Finger gezeichnet, auf meinem mini kleinen Handybildschirm</p>
+  </div>
+  
+  <div class="zeichnungsbereich">
+    
+  <img src="Handyzeichnung1.jpg" alt="Handyzeichnung 1">
+  <p>Das Tier</p>
+
+  <img src="Handyzeichnung2.jpg" alt="Handyzeichnung 2">
+  <p>Fred</p>
+
+  <img src="Handyzeichnung3.jpg" alt="Handyzeichnung 1">
+  <p>Oder war das Fred?</p>
+
+  <img src="Handyzeichnung4.jpg" alt="Handyzeichnung 1">
+  <p>"Es stimmt, ich habe deine Zahnbürste zum reinigen des Waschbeckens benutzt."</p>
+
+  <img src="Handyzeichnung5.jpg" alt="Handyzeichnung 1">
+  <p>Thomas!</p>
+
+  <img src="Handyzeichnung6.jpg" alt="Handyzeichnung 1">
+  <p>Was man nicht alles am Bahnhof sieht</p>
+
+  <img src="Handyzeichnung7 .jpg" alt="Handyzeichnung 1">
+  <p>Unfreundlich find ich</p>
+
+  <img src="Handyzeichnung8.jpg" alt="Handyzeichnung 1">
+  <p>Ihm gehts nicht so gut</p>
+
+  <img src="Handyzeichnung9.jpg" alt="Handyzeichnung 1">
+  <p>Es wird immer schlimmer...</p>
+
+  <img src="Handyzeichnung10.jpg" alt="Handyzeichnung 1">
+  <p>Huiii</p>
+
+  <img src="Handyzeichnung11.jpg" alt="Handyzeichnung 1">
+  <p>Schlichtweg Kunst. Nenn mich von heute an Picasso</p>
+
+  <img src="Handyzeichnung12.jpg" alt="Handyzeichnung 1">
+  <p>Ida findet Freunde (anders als ich)</p>
+
+  <img src="Handyzeichnung13.jpg" alt="Handyzeichnung 1">
+  <p>Kleiner Mensch - Zeichung? Was ist das eigentlich?</p>
+
+  <img src="Handyzeichnung14.jpg" alt="Handyzeichnung 1">
+  <p>Aufnahme von mir, jeden Tag im Zug (ich bin ein müder Mensch)</p>
+  
+  <img src="Handyzeichnung15.jpg" alt="Handyzeichnung 1">
+  <p>Ohne Worte</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeichnungen anschauen</title>
+    <link rel="stylesheet" href="CSS.css">
+    <script src="JavaSkript.js" defer></script>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Kärtchen.html">Kärtchen</a></li>
+        <li><a href="Kunst.html">Kunst</a></li>
+        <li><a href="Filme.html">Filme</a></li>
+        <li><a href="Kommentare.html">Kommentare</a></li>
+    </ul>
+</nav>
+    
+<header>
+    <h1>Kärtchen</h1>
+    <p>Hier kannst du die Kärtchen anschauen, die Sammlung ist aber nicht komplett vollständig.</p>
+</header>
+
+    <!-- Bildanzeige -->
+    <div class="bild-container">
+        <div class="navigation">
+            <button id="prevButton" style="visibility: hidden;"></button>
+            <button id="nextButton"></button>
+        </div>
+        <img id="bild" src="q1.jpg" alt="Bild 1">
+        <div class="bild-text" id="bildText">Das ist das erste Bild (q1.jpg).</div>
+    </div>
+
+    <!-- Info zu Kärtchen -->
+    <div class="info" id="info1">
+        <h2>Info zu Kärtchen 1</h2>
+        <p>Dies ist die Beschreibung für Kärtchen 1.</p>
+    </div>
+    <div class="info" id="info2">
+        <h2>Info zu Kärtchen 2</h2>
+        <p>Dies ist die Beschreibung für Kärtchen 2.</p>
+    </div>
+    <div class="info" id="info3">
+        <h2>Info zu Kärtchen 3</h2>
+        <p>Dies ist die Beschreibung für Kärtchen 3.</p>
+    </div>
+
+    <script>
+        // Bild Navigation mit individuellen Texten
+        const bilder = [
+            { src: 'q1.jpg', text: 'Willkommen bei den Kärtchen! Da ich es leider nicht hingekriegt habe das man sie umdrehen kann, musst du damit leben einfach nach Links oder Rechts zu klicken. Ich wünsche dir trotzdem viel Spass!' },
+            { src: 'q2.jpg', text: 'Wie schon gesagt, du kannst das Kärtchen nicht umdrehen also ignoriere einfach den Pfeil da unten. Und bitte nur bei 123°C waschen. Und nicht in die Waschmaschine stecken.' },
+            { src: 'q3.jpg', text: '' },
+            { src: 'q4.jpg', text: '' },
+            { src: 'q5.jpg', text: '' },
+            { src: 'q6.jpg', text: 'Fortsetzung vom ersten Kärtchen' },
+            { src: 'q7.jpg', text: 'In der OS war TippEx wertvoller als Gold' },
+            { src: 'q8.jpg', text: '' },
+            { src: 'q9.jpg', text: '' },
+            { src: 'q10.jpg', text: '' },
+            { src: 'q11.jpg', text: '' },
+            { src: 'q12.jpg', text: '' },
+            { src: 'q22.jpg', text: '' },
+            { src: 'q13.jpg', text: '' },
+            { src: 'q14.jpg', text: '' },
+            { src: 'q15.jpg', text: '' },
+            { src: 'q16.jpg', text: '' },
+            { src: 'q17.jpg', text: '' },
+            { src: 'q18.jpg', text: '' },
+            { src: 'q19.jpg', text: '' },
+            { src: 'q20.jpg', text: 'Danke für die ganzen Ideen' },
+            { src: 'q21.jpg', text: '' },
+            { src: 'q23.jpg', text: '' },
+            { src: 'q24.jpg', text: '' },
+            { src: 'q25.jpg', text: '' },
+            { src: 'q26.jpg', text: '' },
+            { src: 'q27.jpg', text: '' },
+            { src: 'q28.jpg', text: '' },
+            { src: 'q29.jpg', text: '' },
+            { src: 'q30.jpg', text: '' },
+            { src: 'a1.jpg', text: 'Der Arme Franz-Hans' },
+            { src: 'a2.jpg', text: '' },
+            { src: 'a3.jpg', text: '' },
+            { src: 'a4.jpg', text: '' },
+            { src: 'a5.jpg', text: 'Ein typischer Die-Zahnputzfrau-kommt-Tag' },
+            { src: 'a6.jpg', text: '' },
+            { src: 'a7.jpg', text: 'Jemand ist da aber nicht so glücklich' },
+            { src: 'a8.jpg', text: '' },
+            { src: 'a9.jpg', text: '' },
+            { src: 'a10.jpg', text: '' },
+            { src: 'a11.jpg', text: 'Jeder Person der ich das gezeigt habe hat mir gesagt "Wow, das bin ja so ich"' },
+            { src: 'a12.jpg', text: '' },
+            { src: 'a13.jpg', text: '' },
+            { src: 'a14.jpg', text: '' },
+            { src: 'a15.jpg', text: '' },
+            { src: 'a16.jpg', text: '<audio src="Kahoot.mp3" controls autoplay></audio>' },
+            { src: 'a17.jpg', text: '' },
+            { src: 'a18.jpg', text: '' },
+            { src: 'a19.jpg', text: '' },
+            { src: 'a20.jpg', text: '' },
+            { src: 'a21.jpg', text: '' },
+            { src: 'a22.jpg', text: '' },
+            { src: 'a23.jpg', text: '' },
+            { src: 'a24.jpg', text: '' },
+            { src: 'a25.jpg', text: '' },
+            { src: 'a26.jpg', text: 'Emilies Idee' },
+            { src: 'a27.jpg', text: '' },
+            { src: 'a28.jpg', text: 'Kindheitstrauma' },
+            { src: 'a29.jpg', text: '' },
+            { src: 'a30.jpg', text: 'Das erste Kärtchen das ich je gezeichnet habe' },
+            { src: 'a31.jpg', text: 'Nach einer wahren Begebenheit' },
+            { src: 'a32.jpg', text: '' },
+            { src: 'a33.jpg', text: '' },
+            { src: 'a34.jpg', text: '' },
+            { src: 'a35.jpg', text: '' },
+            { src: 'm1.jpg', text: '' },
+            { src: 'm2.jpg', text: '' },
+            { src: 'm3.jpg', text: 'Stressige Situation' },
+            { src: 'm4.jpg', text: 'Jeder Mensch muss die gleiche Entscheidung treffen. Niemand kann miteinander kommunizieren. Wenn mehr als die Hälft den blauen Knopf drückt stirbt keiner, wenn mehr als die Hälft den roten Knopf drücken sterben alle die den blauen Knopf gedrückt haben.' },
+            { src: 'm5.jpg', text: 'Und so hat das alles gestartet...' },
+            { src: 'm6.jpg', text: '' },
+            { src: 'm7.jpg', text: 'Jede Pause die ich mit Alice, Clara und Co. verbracht habe, wurde immer diese Frage gestelt. Ich habe mich immer gefragt, was sie bitte um den Mund haben sollen. Sie haben jedes mal Croissant gegessen, da ist doch nichts drinnen was dir um den Mund kleben könnte?' },
+            { src: 'm8.jpg', text: '' },
+            { src: 'm9.jpg', text: 'Situation am Spielplatz: Alice läuft gegen Sandkasten und verspricht sich' },
+            { src: 'm10.jpg', text: '' },
+            { src: 'm11.jpg', text: 'Jede einzelne Person die da steht ist Emilie. Sonst will niemand meine tollen Kärtchen sehen' },
+            { src: 'm12.jpg', text: '' },
+            { src: 'm13.jpg', text: '' },
+            { src: 'm14.jpg', text: '' },
+            { src: 'm15.jpg', text: '' },
+            { src: 'm16.jpg', text: '' },
+            { src: 'm17.jpg', text: '' },
+            { src: 'm18.jpg', text: '' },
+            { src: 'm19.jpg', text: '' },
+            { src: 'w1.jpg', text: '' },
+            { src: 'w2.jpg', text: 'Ich habe gelitten' },
+            { src: 'w3.jpg', text: '' },
+            { src: 'w4.jpg', text: '' },
+            { src: 'w5.jpg', text: 'Kinder.' },
+            { src: 'w6.jpg', text: '' },
+            { src: 'w7.jpg', text: '' },
+            { src: 'w8.jpg', text: '' },
+            { src: 'w9.jpg', text: '' },
+            { src: 'w10.jpg', text: '' },
+            { src: 'w11.jpg', text: '' },
+            { src: 'w12.jpg', text: 'Hohe Kreativität' },
+            { src: 'w13.jpg', text: '' },
+            { src: 'w14.jpg', text: 'Nach einer wahren Begebenheit' },
+            { src: 'w15.jpg', text: '' },
+            { src: 'w16.jpg', text: '' },
+            { src: 'w17.jpg', text: '' },
+            { src: 'w18.jpg', text: 'Französisch - Part 1' },
+            { src: 'w19.jpg', text: '' },
+            { src: 'w20.jpg', text: '' },
+            { src: 'w21.jpg', text: '' },
+            { src: 'w22.jpg', text: 'Von Sofiia gezeichnet' },
+            { src: 'w23.jpg', text: 'Französisch - Part 2' },
+            { src: 'w24.jpg', text: '' },
+            { src: 'w25.jpg', text: '' },
+            { src: 'w26.jpg', text: '' },
+            { src: 'w27.jpg', text: '' },
+            { src: 'w28.jpg', text: '' },
+            { src: 'w29.jpg', text: '' },
+            { src: 'w30.jpg', text: '' },
+            { src: 'w31.jpg', text: '' },
+            { src: 'w32.jpg', text: '' },
+            { src: 'w33.jpg', text: '' },
+            { src: 'w34.jpg', text: '' },
+            { src: 'w35.jpg', text: '' },
+            { src: 'w36.jpg', text: '' },
+            { src: 'w37.jpg', text: '' },
+            { src: 'w38.jpg', text: '' },
+            { src: 'w39.jpg', text: '' },
+            { src: 'w40.jpg', text: 'Juhu!' },
+            { src: 'w41.jpg', text: '' },
+            { src: 'w42.jpg', text: 'Mein Schlafparalyse-Dämon' },
+            { src: 'w43.jpg', text: '' },
+            { src: 'w44.jpg', text: '' },
+            { src: 'w45.jpg', text: '' },
+            { src: 'w46.jpg', text: 'Von Emilie gezeichnet' },
+            { src: 's (1).jpg', text: '' },
+            { src: 's (2).jpg', text: '' },
+            { src: 's (3).jpg', text: 'Kunst' },
+            { src: 's (4).jpg', text: '' },
+            { src: 's (5).jpg', text: '' },
+            { src: 's (6).jpg', text: '' },
+            { src: 's (7).jpg', text: '' },
+            { src: 's (8).jpg', text: '' },
+            { src: 's (9).jpg', text: '' },
+            { src: 's (10).jpg', text: '' },
+            { src: 's (11).jpg', text: '' },
+            { src: 's (12).jpg', text: '' },
+            { src: 's (13).jpg', text: '' },
+            { src: 's (14).jpg', text: '' },
+            { src: 's (15).jpg', text: '' },
+            { src: 's (16).jpg', text: '' },
+            { src: 's (17).jpg', text: '' },
+            { src: 's (18).jpg', text: 'Schulreise und die Angst zu viel mitzunehmen' },
+            { src: 's (19).jpg', text: '' },
+            { src: 's (20).jpg', text: '' },
+            { src: 's (21).jpg', text: '' },
+            { src: 's (22).jpg', text: '' },
+            { src: 's (23).jpg', text: '' },
+            { src: 's (24).jpg', text: 'Es heisst eigentlich "Wo ist Walter?"' },
+            { src: 's (25).jpg', text: '' },
+            { src: 's (26).jpg', text: '' },
+            { src: 's (27).jpg', text: '' },
+            { src: 's (28).jpg', text: '' },
+            { src: 's (29).jpg', text: '' },
+            { src: 's (30).jpg', text: '' },
+            { src: 's (31).jpg', text: '' },
+            { src: 's (32).jpg', text: '' },
+            { src: 's (33).jpg', text: '' },
+            { src: 's (34).jpg', text: '' },
+            { src: 's (35).jpg', text: '' },
+            { src: 's (36).jpg', text: '' },
+            { src: 's (37).jpg', text: '' },
+            { src: 's (38).jpg', text: '' },
+            { src: 's (39).jpg', text: '' },
+            { src: 's (40).jpg', text: '' },
+            { src: 's (41).jpg', text: '' },
+            { src: 's (42).jpg', text: '' },
+            { src: 's (43).jpg', text: '' },
+            { src: 's (44).jpg', text: '' },
+            { src: 's (45).jpg', text: '' },
+            { src: 's (46).jpg', text: '' },
+            { src: 's (47).jpg', text: '' },
+            { src: 's (48).jpg', text: '' },
+            { src: 's (49).jpg', text: '' },
+            { src: 's (50).jpg', text: '' },
+            { src: 's (51).jpg', text: '' },
+            { src: 's (52).jpg', text: '' },
+            { src: 's (53).jpg', text: '' },
+            { src: 's (54).jpg', text: '' },
+            { src: 's (55).jpg', text: 'Titanic U-Boot...' },
+            { src: 's (56).jpg', text: '' },
+            { src: 's (57).jpg', text: '' },
+            { src: 's (58).jpg', text: '' },
+            { src: 's (59).jpg', text: '' },
+            { src: 's (60).jpg', text: 'Ich finde das Original, von dem ich es abgezeichnet habe, nicht mehr' },
+            { src: 'd (1).jpg', text: '' },
+            { src: 'd (2).jpg', text: '' },
+            { src: 'd (3).jpg', text: '' },
+            { src: 'd (4).jpg', text: '' },
+            { src: 'd (5).jpg', text: '' },
+            { src: 'd (6).jpg', text: '' },
+            { src: 'd (7).jpg', text: 'Perspektive' },
+            { src: 'd (8).jpg', text: '' },
+            { src: 'd (9).jpg', text: '' },
+            { src: 'd (10).jpg', text: '' },
+            { src: 'd (11).jpg', text: '' },
+            { src: 'd (12).jpg', text: '' },
+            { src: 'd (13).jpg', text: '' },
+            { src: 'd (14).jpg', text: '' },
+            { src: 'd (15).jpg', text: '' },
+            { src: 'd (16).jpg', text: '' },
+            { src: 'd (17).jpg', text: '' },
+            { src: 'd (18).jpg', text: '' },
+            { src: 'd (19).jpg', text: '' },
+            { src: 'd (20).jpg', text: '' },
+            { src: 'd (21).jpg', text: '' },
+            { src: 'd (22).jpg', text: '' },
+            { src: 'd (23).jpg', text: '' },
+            { src: 'd (24).jpg', text: '' },
+            { src: 'd (25).jpg', text: '' },
+            { src: 'd (26).jpg', text: '3,1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679' },
+            { src: 'd (27).jpg', text: '' },
+            { src: 'd (28).jpg', text: '' },
+            { src: 'd (29).jpg', text: '' },
+            { src: 'd (30).jpg', text: '' },
+            { src: 'd (31).jpg', text: '' },
+            { src: 'd (32).jpg', text: '' },
+            { src: 'd (33).jpg', text: '' },
+            { src: 'd (34).jpg', text: '' },
+            { src: 'd (35).jpg', text: '' },
+            { src: 'd (36).jpg', text: '' },
+            { src: 'd (37).jpg', text: 'Bäh' },
+            { src: 'd (38).jpg', text: '' },
+            { src: 'd (39).jpg', text: '' },
+            { src: 'd (40).jpg', text: '' },
+            { src: 'd (41).jpg', text: '' },
+            { src: 'd (42).jpg', text: '' },
+            { src: 'd (43).jpg', text: '' },
+            { src: 'd (44).jpg', text: 'c3' },
+            { src: 'd (45).jpg', text: '' },
+            { src: 'd (46).jpg', text: '' },
+            { src: 'd (47).jpg', text: '' },
+            { src: 'd (48).jpg', text: '' },
+            { src: 'd (49).jpg', text: '' },
+            { src: 'd (50).jpg', text: '3b' },
+            { src: 'd (51).jpg', text: '' },
+        ];
+
+        let aktuellerIndex = 0;
+
+        const bildElement = document.getElementById("bild");
+        const textElement = document.getElementById("bildText");
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+
+        function updateBild() {
+            bildElement.src = bilder[aktuellerIndex].src;
+            textElement.innerHTML = bilder[aktuellerIndex].text;
+
+
+            // Pfeile sichtbar oder unsichtbar machen
+            prevButton.style.visibility = aktuellerIndex === 0 ? "hidden" : "visible";
+            nextButton.style.visibility = aktuellerIndex === bilder.length - 1 ? "hidden" : "visible";
+        }
+
+        prevButton.addEventListener("click", () => {
+            if (aktuellerIndex > 0) {
+                aktuellerIndex--;
+                updateBild();
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            if (aktuellerIndex < bilder.length - 1) {
+                aktuellerIndex++;
+                updateBild();
+            }
+        });
+
+        // Kärtchen Info
+        function showInfo(id) {
+            const infos = document.querySelectorAll('.info');
+            infos.forEach(info => info.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        // Initiales Bild anzeigen
+        updateBild();
+
+        
+    </script>
+
+</body>
+
+</html>

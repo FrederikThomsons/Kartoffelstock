@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kommentare</title>
+    <link rel="stylesheet" href="CSS.css">
+    <style>
+        #commentsSection {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+        .comment {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Kärtchen.html">Kärtchen</a></li>
+            <li><a href="Kunst.html">Kunst</a></li>
+            <li><a href="Filme.html">Filme</a></li>
+            <li><a href="Kommentare.html">Kommentare</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Kommentare</h1>
+        <p>Kannst hier einen Kommentar schreiben (ich hoffe das es funktioniert)</p>
+    </header>
+
+    <form id="commentForm">
+        <input type="text" id="commentInput" maxlength="50" placeholder="Schreibe hier deinen Kommentar...">
+        <button type="submit">Abschicken</button>
+    </form>
+
+    <div id="commentsSection">
+        <!-- Hier werden Kommentare angezeigt -->
+    </div>
+
+    <script>
+        // Funktion zum Laden der Kommentare
+        function ladeKommentare() {
+            const comments = JSON.parse(localStorage.getItem('kommentare')) || [];
+            const commentsSection = document.getElementById('commentsSection');
+            commentsSection.innerHTML = ''; // Alles löschen
+            comments.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment';
+                div.textContent = comment;
+                commentsSection.appendChild(div);
+            });
+        }
+
+        // Beim Abschicken des Formulars
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = document.getElementById('commentInput');
+            const neuerKommentar = input.value.trim();
+            if (neuerKommentar !== '') {
+                let comments = JSON.parse(localStorage.getItem('kommentare')) || [];
+                comments.push(neuerKommentar);
+                localStorage.setItem('kommentare', JSON.stringify(comments));
+                input.value = '';
+                ladeKommentare();
+            }
+        });
+
+        // Kommentare beim Laden der Seite anzeigen
+        window.onload = ladeKommentare;
+    </script>
+</body>
+</html>

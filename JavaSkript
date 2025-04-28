@@ -1,0 +1,50 @@
+// Funktion zum Anzeigen von Kärtchen-Infos
+function showInfo(id) {
+    let infos = document.querySelectorAll('.info');
+    infos.forEach(info => info.style.display = 'none');
+    
+    let selectedInfo = document.getElementById(id);
+    selectedInfo.style.display = 'block';
+}
+
+// Funktion zum Abspielen von Musik
+function playSound(soundId) {
+    let audio = new Audio(`${soundId}.mp3`);
+    audio.play();
+}
+
+// Funktion zum Anzeigen von Ordnern auf der Kunst-Seite
+function showFolder(folderId) {
+    let folders = document.querySelectorAll('.ordner-info');
+    folders.forEach(folder => folder.style.display = 'none');
+
+    let selectedFolder = document.getElementById(folderId);
+    selectedFolder.style.display = 'block';
+}
+
+// Kommentar-Formular
+document.getElementById('commentForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    let comment = document.getElementById('commentInput').value;
+    let commentsSection = document.getElementById('commentsSection');
+    
+    let newComment = document.createElement('p');
+    newComment.textContent = comment;
+    commentsSection.appendChild(newComment);
+    
+    document.getElementById('commentInput').value = ''; // Textfeld leeren
+});
+
+function updateBild() {
+    bildElement.src = bilder[aktuellerIndex].src;
+
+    if (bilder[aktuellerIndex].text === 'music') {
+        textElement.innerHTML = '<audio controls autoplay><source src="Kahoot.mp3" type="audio/mpeg">Dein Browser unterstützt kein Audioelement.</audio>';
+    } else {
+        textElement.textContent = bilder[aktuellerIndex].text;
+    }
+
+    // Pfeile sichtbar oder unsichtbar machen
+    prevButton.style.visibility = aktuellerIndex === 0 ? "hidden" : "visible";
+    nextButton.style.visibility = aktuellerIndex === bilder.length - 1 ? "hidden" : "visible";
+}
