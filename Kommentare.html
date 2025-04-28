@@ -20,7 +20,7 @@
 
     <header>
         <h1>Kommentare</h1>
-        <p>Kannst hier einen Kommentar schreiben (ich hoffe das es funktioniert)</p>
+        <p>Kannst hier einen Kommentar schreiben (ich hoffe, dass es funktioniert).</p>
     </header>
 
     <main>
@@ -52,23 +52,19 @@
         };
 
         // Firebase starten
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.database(app);
 
         // Kommentar laden
         function ladeKommentare() {
             const commentsSection = document.getElementById('commentsSection');
             db.ref('kommentare').orderByChild('timestamp').limitToLast(100).on('value', snapshot => {
-                commentsSection.innerHTML = '';
-                let comments = [];
+                commentsSection.innerHTML = ''; // Leert den Bereich für neue Kommentare
                 snapshot.forEach(childSnapshot => {
-                    comments.push(childSnapshot.val().text);
-                });
-                comments.reverse(); // Neueste zuerst
-                comments.forEach(text => {
+                    const commentData = childSnapshot.val();
                     const div = document.createElement('div');
                     div.className = 'comment';
-                    div.textContent = text;
+                    div.textContent = commentData.text;
                     commentsSection.appendChild(div);
                 });
             });
@@ -80,11 +76,12 @@
             const input = document.getElementById('commentInput');
             const text = input.value.trim();
             if (text) {
+                // Kommentar in Firebase-Datenbank speichern
                 db.ref('kommentare').push({
                     text: text,
                     timestamp: Date.now()
                 });
-                input.value = '';
+                input.value = ''; // Eingabefeld zurücksetzen
             }
         });
 
@@ -93,4 +90,3 @@
     </script>
 </body>
 </html>
-
