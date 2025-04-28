@@ -5,18 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kommentare</title>
     <link rel="stylesheet" href="CSS.css">
-    <style>
-        #commentsSection {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-        }
-        .comment {
-            padding: 5px;
-            border-bottom: 1px solid #ccc;
-        }
-    </style>
 </head>
 
 <body>
@@ -35,45 +23,21 @@
         <p>Kannst hier einen Kommentar schreiben (ich hoffe das es funktioniert)</p>
     </header>
 
-    <form id="commentForm">
-        <input type="text" id="commentInput" maxlength="50" placeholder="Schreibe hier deinen Kommentar...">
-        <button type="submit">Abschicken</button>
-    </form>
+    <main>
+        <form id="commentForm">
+            <input type="text" id="commentInput" maxlength="100" placeholder="Schreibe hier deinen Kommentar...">
+            <button type="submit">Abschicken</button>
+        </form>
 
-    <div id="commentsSection">
-        <!-- Hier werden Kommentare angezeigt -->
-    </div>
+        <div id="commentsSection">
+            <!-- Kommentare erscheinen hier -->
+        </div>
+    </main>
 
-    <script>
-        // Funktion zum Laden der Kommentare
-        function ladeKommentare() {
-            const comments = JSON.parse(localStorage.getItem('kommentare')) || [];
-            const commentsSection = document.getElementById('commentsSection');
-            commentsSection.innerHTML = ''; // Alles löschen
-            comments.forEach(comment => {
-                const div = document.createElement('div');
-                div.className = 'comment';
-                div.textContent = comment;
-                commentsSection.appendChild(div);
-            });
-        }
+    <!-- Firebase einbinden -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
-        // Beim Abschicken des Formulars
-        document.getElementById('commentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const input = document.getElementById('commentInput');
-            const neuerKommentar = input.value.trim();
-            if (neuerKommentar !== '') {
-                let comments = JSON.parse(localStorage.getItem('kommentare')) || [];
-                comments.push(neuerKommentar);
-                localStorage.setItem('kommentare', JSON.stringify(comments));
-                input.value = '';
-                ladeKommentare();
-            }
-        });
-
-        // Kommentare beim Laden der Seite anzeigen
-        window.onload = ladeKommentare;
-    </script>
+    <script src="kommentare.js"></script>
 </body>
 </html>
