@@ -265,14 +265,14 @@ header p {
 }
 
 /* Bildanzeige */
-.bild-container {
+.Bild-container {
     position: relative;
     text-align: center;
     margin: 40px auto;
     max-width: 600px;
 }
 
-.bild-container img {
+.Bild-container img {
     width: 100%;
     height: auto;
     border-radius: 10px;
