@@ -491,3 +491,12 @@ button[type="submit"]:hover {
       border-radius: 0 0 10px 10px;
       font-family: sans-serif;
     }
+
+.header-bereich p {
+    font-size: 18px;
+    color: #666;
+    max-width: 400px; /* vorher 600px */
+    text-align: center;
+    margin: 0 20px;
+}
+
