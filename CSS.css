@@ -458,7 +458,7 @@ button[type="submit"]:hover {
 }
 
 .bild-container {
-    width: 600px; /* gewünschte feste Breite */
+    width: 900px; /* gewünschte feste Breite */
     margin: 20px auto;
 }
 
