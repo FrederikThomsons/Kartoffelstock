@@ -491,3 +491,8 @@ button[type="submit"]:hover {
     border-radius: 0 0 10px 10px;
     font-family: sans-serif;
 }
+
+.pic-container {
+    width: 600px; /* gewünschte feste Breite */
+    margin: 40px auto;
+}
