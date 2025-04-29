@@ -470,3 +470,24 @@ button[type="submit"]:hover {
     font-size: 16px;
     text-align: left;
 }
+
+   .bild-container {
+      width: 400px; /* gewünschte feste Breite */
+      margin: 20px auto;
+    }
+
+    .bild-container img {
+      width: 100%;
+      height: 300px; /* gewünschte feste Höhe */
+      object-fit: cover;
+      display: block;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .bild-container .beschreibung {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      font-family: sans-serif;
+    }
