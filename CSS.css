@@ -495,4 +495,5 @@ button[type="submit"]:hover {
 .pic-container {
     width: 400px; /* gewünschte feste Breite */
     margin: 20px auto;
+    padding: 8px 16px;
 }
