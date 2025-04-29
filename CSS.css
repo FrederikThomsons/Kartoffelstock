@@ -493,6 +493,6 @@ button[type="submit"]:hover {
 }
 
 .pic-container {
-    width: 600px; /* gewünschte feste Breite */
-    margin: 40px auto;
+    width: 400px; /* gewünschte feste Breite */
+    margin: 20px auto;
 }
