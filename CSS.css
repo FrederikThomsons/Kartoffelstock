@@ -491,3 +491,16 @@ button[type="submit"]:hover {
     height: auto;
     border-radius: 10px;
 }
+
+.beschreibung {
+  position: absolute;
+  bottom: 10px; /* Abstand vom unteren Rand der Bildbox */
+  left: 50%; /* Zentriert die Box horizontal */
+  transform: translateX(-50%); /* Korrigiert die horizontale Zentrierung */
+  background-color: black; /* Schwarzer Hintergrund */
+  color: white; /* Weißer Text */
+  padding: 10px 20px; /* Innenabstand */
+  max-width: 80%; /* Maximale Breite der Box */
+  text-align: center; /* Textzentrierung */
+  box-sizing: border-box; /* Damit das Padding die Gesamtbreite der Box nicht verändert */
+}
