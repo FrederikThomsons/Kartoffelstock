@@ -457,16 +457,18 @@ button[type="submit"]:hover {
     text-align: left;
 }
 
+/* Bildanzeige */
 .bild-container {
-    width: 400px;
-    margin: 20px auto;
+    position: relative;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
 }
 
 .bild-container img {
     width: 100%;
-    height: auto; /* Höhe passt sich automatisch an */
-    display: block;
-    border-radius: 10px 10px 0 0;
+    height: auto;
+    border-radius: 10px;
 }
 
 .bild-container .beschreibung {
@@ -476,4 +478,3 @@ button[type="submit"]:hover {
     border-radius: 0 0 10px 10px;
     font-family: sans-serif;
 }
-
