@@ -478,24 +478,3 @@ button[type="submit"]:hover {
     font-family: sans-serif;
 }
 
-/* Bildanzeige */
-.bild-container {
-    position: relative;
-    text-align: center;
-    margin: 40px auto;
-    max-width: 600px;
-}
-
-.bild-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.bild-container .beschreibung {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
-    font-family: sans-serif;
-}
