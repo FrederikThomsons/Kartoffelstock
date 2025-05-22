@@ -478,3 +478,9 @@ button[type="submit"]:hover {
     border-radius: 0 0 10px 10px;
     font-family: sans-serif;
 }
+
+.box {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
