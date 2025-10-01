@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="de">
 
 <head>
@@ -25,7 +26,6 @@
     <p>Hier kannst du die Kärtchen anschauen, die Sammlung ist aber nicht komplett vollständig.</p>
 </header>
 
-    <!-- Bildanzeige -->
     <div class="bild-container">
         <div class="navigation">
             <button id="prevButton" style="visibility: hidden;"></button>
@@ -33,20 +33,6 @@
         </div>
         <img id="bild" src="q1.jpg" alt="Bild 1">
         <div class="bild-text" id="bildText">Das ist das erste Bild (q1.jpg).</div>
-    </div>
-
-    <!-- Info zu Kärtchen -->
-    <div class="info" id="info1">
-        <h2>Info zu Kärtchen 1</h2>
-        <p>Dies ist die Beschreibung für Kärtchen 1.</p>
-    </div>
-    <div class="info" id="info2">
-        <h2>Info zu Kärtchen 2</h2>
-        <p>Dies ist die Beschreibung für Kärtchen 2.</p>
-    </div>
-    <div class="info" id="info3">
-        <h2>Info zu Kärtchen 3</h2>
-        <p>Dies ist die Beschreibung für Kärtchen 3.</p>
     </div>
 
     <script>
@@ -326,7 +312,6 @@
             }
         });
 
-        // Kärtchen Info
         function showInfo(id) {
             const infos = document.querySelectorAll('.info');
             infos.forEach(info => info.style.display = 'none');
@@ -342,3 +327,4 @@
 </body>
 
 </html>
+
