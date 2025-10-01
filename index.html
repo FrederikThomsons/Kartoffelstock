@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="de">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startseite</title>
     <link rel="stylesheet" href="CSS.css">
-    <script src="JavaSkript.js" defer>
 </script>
 
-      <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ESVVLQR47"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -27,7 +27,6 @@
     background-color: #f0f0f0;
     border-radius: 10px;
   }
-        /* Passwort-Overlay */
         #password-overlay {
             position: fixed;
             top: 0; left: 0;
@@ -59,7 +58,7 @@
 </header>
 
 <body>
-<!-- Passwort-Sperre -->
+
 <div id="password-overlay">
     <h2>Passwort eingeben</h2>
     <input type="password" id="passwordInput" placeholder="Passwort">
@@ -86,8 +85,6 @@
   <audio id="klavier6" src="Klavier6.mp4"></audio>
   <audio id="klavier7" src="Klavier7.mp4"></audio>
 
-
-  <!-- Bestehende about-me Box -->
 <div class="about-me">
   <h3>Keine Ahnung was ich für einen Titel machen soll</h3>
   <p>
@@ -95,65 +92,63 @@
   </p>
 </div>
 
-
-  <!-- Duplikate für alle 12 Bilder -->
   <div class="bild-container">
-    <img src="Bild1.png" alt="Bild 1">
+    <img src="Bild1.png" alt="Eine Person am überlegen">
     <div class="beschreibung">Zuerst habe ich nachgedacht (wichtiger Schritt!)</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild2.png" alt="Bild 2">
+    <img src="Bild2.png" alt="Eine Person am Computer">
     <div class="beschreibung">Dann habe ich angefangen zu programmieren</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild3.png" alt="Bild 3">
+    <img src="Bild3.png" alt="Eine Person vor dem Computer, mit Kopf auf der Tastatur">
     <div class="beschreibung">Und noch mehr programmiert...</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild4.png" alt="Bild 4">
+    <img src="Bild4.png" alt="Schrecklicher Code, mit der Person die darauf zeigt im Vordergrund">
     <div class="beschreibung">Aber guck dir diesen tollen Code an</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild5.png" alt="Bild 5">
+    <img src="Bild5.png" alt="Person fotografiert Kärtchen">
     <div class="beschreibung">Dann habe ich jedes einzelne Kärtchen fotografiert und zugeschnitten</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild6.png" alt="Bild 6">
+    <img src="Bild6.png" alt="Person sitzt genervt vor dem Computer">
     <div class="beschreibung">Und noch mehr programmiert</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild7.png" alt="Bild 7">
+    <img src="Bild7.png" alt="Person glücklich">
     <div class="beschreibung">Und ich war endlich fertig</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild8.png" alt="Bild 8">
+    <img src="Bild8.png" alt="Person traurig">
     <div class="beschreibung">Nein, ich bin nicht fertig - ich muss die Website zuerst noch online stellen</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild9.png" alt="Bild 9">
+    <img src="Bild9.png" alt="Person genervt, mit Fehleranzeigen im Vordergrund">
     <div class="beschreibung">Ich bin langsam an GitHub verzweifelt</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild10.png" alt="Bild 10">
+    <img src="Bild10.png" alt="Verzweifelte Person">
     <div class="beschreibung">Und ich habe ein bisschen geweint</div>
   </div>
 
   <div class="bild-container">
-    <img src="Bild11.png" alt="Bild 11">
+    <img src="Bild11.png" alt="Person greift ChatGPT beim Kragen">
     <div class="beschreibung">"ChatGPT, was mach ich falsch?!!"</div>
   </div>
 
   <div class="bild-container">
-    <img src="bild12.png" alt="Bild 12">
+    <img src="bild12.png" alt="Person sitzt glücklich vor der Webseite">
     <div class="beschreibung">Und um 22:38 Uhr, nach 4 Stunden Verzweiflung, hat es endlich funktioniert (und ja, das ist die alte Version der Webseite)</div>
   </div>
 </section>
@@ -161,7 +156,6 @@
 
 
 <script>
-    // Passwort überprüfen
     function checkPassword() {
         const password = document.getElementById('passwordInput').value;
         const correctPassword = "Kartoffelstock"; // <-- hier dein Passwort eingeben
@@ -174,7 +168,6 @@
         }
     }
     
-    // Seite freischalten
     function freischalten() {
         document.getElementById('password-overlay').style.display = 'none';
         document.getElementById('content').style.display = 'block';
@@ -191,7 +184,6 @@
     
     let aktuellerTrack = null;
     
-    // Musik abspielen
     function playSound(trackId) {
         const audios = document.querySelectorAll('audio');
         audios.forEach(audio => {
