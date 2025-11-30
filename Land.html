@@ -61,9 +61,19 @@ h1{font-size:20px;margin:12px 0 10px}
 .leader-photo{width:550px;flex:0 0 220px;border-radius:10px;height:500px;object-fit:cover}
 .leader-about{flex:1}
 
-.simple-card{display:flex;flex-direction:column;gap:8px;margin-top:18px;width:500px;height:700px}
-.simple-card img{object-fit:cover;border-radius:8px;flex:0 0}
-.caption{font-size:14px;color:var(--muted)}
+.cards-row {
+  display: flex;       /* Nebeneinander anordnen */
+  gap: 20px;           /* Abstand zwischen den Bildern */
+  flex-wrap: wrap;     /* Falls der Platz zu klein ist, umbrechen */
+}
+
+.simple-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 500px;
+  height: 700px;
+}
 
 .hiring{display:flex;gap:14px;align-items:center;background:linear-gradient(90deg,#fff,#fcfeff);padding:12px;border-radius:10px;margin-top:18px;border:1px solid rgba(11,94,215,0.06)}
 .hiring img{width:110px;height:110px;object-fit:cover;border-radius:8px;flex:0 0 110px}
@@ -116,15 +126,17 @@ h1{font-size:20px;margin:12px 0 10px}
       </div>
     </section>
 
-    <section class="simple-card" aria-labelledby="card-head">
-      <img src="Land6.jpg" alt="Propagandaposter" />
-      <div class="caption" id="card-head">Blabla</div>
-    </section>
+<div class="cards-row">
+  <section class="simple-card" aria-labelledby="card-head1">
+    <img src="Land6.jpg" alt="Propagandaposter" />
+    <div class="caption" id="card-head1">Blabla</div>
+  </section>
 
-    <section class="simple-card" aria-labelledby="card-head">
-      <img src="Land6.jpg" alt="Propagandaposter" />
-      <div class="caption" id="card-head">Blabla</div>
-    </section>
+  <section class="simple-card" aria-labelledby="card-head2">
+    <img src="Land6.jpg" alt="Propagandaposter" />
+    <div class="caption" id="card-head2">Blabla</div>
+  </section>
+</div>
 
     <section class="hiring" aria-label="Wir suchen dich">
       <img src="Land4.jpg" alt="Aufruf: Wir suchen dich" />
