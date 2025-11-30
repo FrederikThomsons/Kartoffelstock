@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="de">
-  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Das Land</title>
+  <title>Das Land</title>
   <link rel="stylesheet" href="CSS.css">
   <script src="JavaSkript.js" defer></script>
 </head>
-  
 <body>
   <nav>
     <ul>
@@ -38,10 +35,8 @@
 font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;background:var(--bg);color:#111}
-
 
 .page{
 max-width:var(--maxw);
@@ -49,39 +44,27 @@ margin:28px auto;
 padding:22px;
 }
 
-
-/* Flagge oben */
-.flag-wrap{background:linear-gradient(180deg,#fff, #fbfdff);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(18,38,63,0.06);}
+.flag-wrap{background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(18,38,63,0.06);}
 h1{font-size:20px;margin:12px 0 10px}
 
-
-/* Textbox für Geschichte */
 .textbox{
 border:1px solid rgba(16,24,40,0.06);
 padding:14px;border-radius:10px;
 min-height:120px;max-height:400px;overflow:auto;
 }
-.textbox{outline: none}
 
-/* Leader section */
 .leader-row{display:flex;gap:18px;align-items:flex-start;margin-top:18px}
-.leader-photo{width:550px;flex:0 0 220px;border-radius:10px;height:500px;object-fi
+.leader-photo{width:550px;flex:0 0 220px;border-radius:10px;height:500px;object-fit:cover}
 .leader-about{flex:1}
 
+.simple-card{display:flex;flex-direction:column;gap:8px;margin-top:18px;width:300px;height:600px}
+.simple-card img{object-fit:cover;border-radius:8px;flex:0 0}
+.caption{font-size:14px;color:var(--muted)}
 
-/* Simple card with image + description */
-.simple-card{display:flex;flex-direction:column;gap:8px;margin-top:18px}
-.simple-card{width:300px;height:600px;object-fit:cover;border-radius:8px;flex:0 0
-.simple-card .caption{font-size:14px;color:var(--muted)}
-
-
-/* Suche-Box */
 .hiring{display:flex;gap:14px;align-items:center;background:linear-gradient(90deg,#fff,#fcfeff);padding:12px;border-radius:10px;margin-top:18px;border:1px solid rgba(11,94,215,0.06)}
 .hiring img{width:110px;height:110px;object-fit:cover;border-radius:8px;flex:0 0 110px}
 .hiring .text{font-weight:600}
 
-
-/* Responsiveness */
 @media (max-width:720px){
 .leader-row{flex-direction:column;align-items:center}
 .leader-photo{width:100%;height:220px;flex:unset}
@@ -89,29 +72,40 @@ min-height:120px;max-height:400px;overflow:auto;
 .hiring img{width:70%;height:auto}
 }
 
-
-/* helper small */
 .muted{color:var(--muted);font-size:13px}
 .label{font-size:13px;color:var(--muted);margin-bottom:6px}
-</style>
 
-<body>
+/* Button für Nationalhymne */
+.hymne-btn{
+  margin-top:10px;
+  padding:8px 14px;
+  background:#0b5ed7;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.hymne-btn:hover{background:#084298}
+  </style>
+
   <main class="page">
-
     <section class="flag-wrap" aria-labelledby="flag-head">
-
       <img src="Land5.jpg" alt="Landesflagge" class="flag-img" />
       <h1 id="flag-head">Die Flagge von Kardemon</h1>
-      <div class="textbox" contenteditable="true" aria-label="Geschichte des Landes">
-        <p>Kardemon wurde am 25.11.2025 gegründet. Der selbsternannte Anführer ist Frederik Thomsons, welcher das Land auch gergründet hat. Das Flaggendesign wurde noch am gleichen Tag entworfen und umgesetzt.</p>
+
+      <div class="textbox" aria-label="Geschichte des Landes">
+        <p>Kardemon wurde am 25.11.2025 gegründet. Der selbsternannte Anführer ist Frederik Thomsons, welcher das Land auch gegründet hat. Das Flaggendesign wurde noch am gleichen Tag entworfen und umgesetzt.</p>
       </div>
+
+      <button class="hymne-btn" onclick="document.getElementById('hymne').play()">Nationalhymne</button>
+      <audio id="hymne" src="hymne.mp3"></audio>
     </section>
 
     <section class="leader-row" aria-labelledby="leader-head">
       <img src="Land1.jpg" alt="Ich" class="leader-photo" />
       <div class="leader-about">
         <div class="label" id="leader-head">Über den Staatsführer</div>
-        <div class="textboxes" contenteditable="true" role="textbox" aria-label="Über dem Staatsführer">
+        <div class="textbox" aria-label="Über den Staatsführer">
           <p>Frederik Thomsons wurde am 14. März 1592 in einer kleinen Stadt in Malta geboren. Seine Eltern starben als er erst 6 Jahre alt war. Fortan musste er sich alleine durchschlagen, indem er Hirsche und Kaninchen im Wald jagte und ass. Jahre später entdeckte er ein altes verlassenes Labor. Frederik brachte sich selbst Chemie bei und stellte Methamphetamin her, welches er auf dem Schwarzmarkt verkaufte und so sehr reich wurde. Im alter von 53 Jahren entdeckte er dann den Stein der Weisen, welchen er benutze um sich unsterblich zu machen und zu verjüngen. Bedauerlicherweise wurde Nicolas Flamel der Titel für den Entdecker für den Stein der Weisen gegeben. Frederik gründete im Jahre 2025 dann sein eigenes Land und stieg direkt zum Staatsführer auf, weil er bei der Bevölkerung sehr beliebt war. (Das Bild ist nicht gephotoshoppt)</p>
         </div>
       </div>
@@ -130,9 +124,4 @@ min-height:120px;max-height:400px;overflow:auto;
   </main>
 </body>
 </html>
-
-
-
-
-
 
