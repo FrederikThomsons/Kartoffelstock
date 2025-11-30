@@ -27,56 +27,107 @@
     <p>Mein eigenes Land</p>
   </header>
 
-  <div class="film-list">
+  <style>
+    :root{
+      --maxw: 1000px;
+      --accent: #0b5ed7;
+      --muted: #666;
+      --card: #ffffff;
+      --bg: #f4f6f8;
+      --radius: 12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
 
-    <div class="film">
-      <h2>Der Spielplatz</h2>
-      <video controls>
-        <source src="Film2.mp4" type="video/mp4">
-      </video>
-        <p>Kleines Musikvideo vom Lied YMCA. Musste dafür extra das Lied umschneiden weil es nicht zum Videomaterial gepasst hat. Und ja, ich und Ida haben dafür für knapp 30 Minuten einen Spielplatz für und besetzt (keine kleine Kinder erlaubt!)</p>
-    </div>
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#111}
 
-    <div class="film">
-      <h2>Die Tastatur</h2>
-      <video controls>
-        <source src="Film3.mp4" type="video/mp4">
-      </video>
-        <p>Ein epischer Film mit sinnvoller und mitreissender Story, begleitet von uralter Musik. Und ich entschuldige mich für die Qualität, aber ich musste 500 MG auf unter 25 MG komprimieren.</p>
-    </div>
+    .page{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:22px;
+    }
 
-    <div class="film">
-      <h2>Das Ding</h2>
-      <video controls>
-        <source src="Animation.mp4" type="video/mp4">
-      </video>
-        <p>Eine mini Animation, die nur 5 Sekunden lang dauert, aber ich daran für mehrere Stunden gearbeitet habe.</p>
-    </div>
+    /* Flagge oben */
+    .flag-wrap{background:linear-gradient(180deg,#fff, #fbfdff);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(18,38,63,0.06);}
+    .flag-img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+    h1{font-size:20px;margin:12px 0 10px}
 
-    <div class="film">
-      <h2>Speedpaint - Frosch</h2>
-      <video controls>
-        <source src="Film6.mp4" type="video/mp4">
-      </video>
-        <p>Ein extremer Zeitraffer von dem Prozess wie ich den tollen Frosch gezeichnet habe (In absolut höchster Qualität!)</p>
-    </div>
+    /* Textbox für Geschichte */
+    .textbox{
+      background:var(--card);
+      border:1px solid rgba(16,24,40,0.06);
+      padding:14px;border-radius:10px;
+      min-height:120px;max-height:400px;overflow:auto;
+    }
+    .textbox[contenteditable]{outline: none}
 
-    <div class="film">
-      <h2>Das Kartenhaus</h2>
-      <video controls>
-        <source src="Film7.mp4" type="video/mp4">
-      </video>
-        <p>Ich habe aus Spass einfach mal ein Kärtchen animiert.</p>
-    </div>
+    /* Leader section */
+    .leader-row{display:flex;gap:18px;align-items:flex-start;margin-top:18px}
+    .leader-photo{width:160px;flex:0 0 160px;border-radius:10px;height:160px;object-fit:cover}
+    .leader-about{flex:1}
 
-    <div class="film">
-      <h2>HAND</h2>
-      <video controls>
-        <source src="Film9.mp4" type="video/mp4">
-      </video>
-        <p>Idk, eine sehr skizzenhafte Hand oder so. Mir war sehr langweilig</p>
-    </div>
+    /* Simple card with image + description */
+    .simple-card{display:flex;flex-direction:column;gap:8px;margin-top:18px}
+    .simple-card img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+    .simple-card .caption{font-size:14px;color:var(--muted)}
 
+    /* Suche-Box */
+    .hiring{display:flex;gap:14px;align-items:center;background:linear-gradient(90deg,#fff,#fcfeff);padding:12px;border-radius:10px;margin-top:18px;border:1px solid rgba(11,94,215,0.06)}
+    .hiring img{width:110px;height:110px;object-fit:cover;border-radius:8px;flex:0 0 110px}
+    .hiring .text{font-weight:600}
+
+    /* Responsiveness */
+    @media (max-width:720px){
+      .leader-row{flex-direction:column;align-items:center}
+      .leader-photo{width:100%;height:220px;flex:unset}
+      .hiring{flex-direction:column;text-align:center}
+      .hiring img{width:70%;height:auto}
+    }
+
+    /* helper small */
+    .muted{color:var(--muted);font-size:13px}
+    .label{font-size:13px;color:var(--muted);margin-bottom:6px}
+  </style>
+
+<body>
+  <main class="page">
+
+    <!-- Flaggen-Bereich -->
+    <section class="flag-wrap" aria-labelledby="flag-head">
+      <!-- ersetze die src-Pfade durch deine eigenen Bilddateien -->
+      <img src="flag.jpg" alt="Landesflagge" class="flag-img" />
+      <h1 id="flag-head">Die Flagge von dem Land</h1>
+      <div class="textbox" contenteditable="true" aria-label="Geschichte des Landes">
+        <strong>Kurze Geschichte:</strong>
+        <p>Hier kannst du die Geschichte des Landes eintragen. Dieser Bereich ist editierbar — klicke hinein und schreibe los.</p>
+        <p>Beispiel: Das Land wurde im Jahr XYZ gegründet. Hier stehen wichtige Ereignisse, Erklärungen zur Symbolik der Flagge und historische Hintergründe.</p>
+      </div>
+    </section>
+
+    <!-- Anführer / Über mich -->
+    <section class="leader-row" aria-labelledby="leader-head">
+      <img src="leader.jpg" alt="Bild des Anführers" class="leader-photo" />
+      <div class="leader-about">
+        <div class="label" id="leader-head">Über mich</div>
+        <div class="textbox" contenteditable="true" role="textbox" aria-label="Über mich">
+          <p>Schreibe hier etwas über dich — Name, Rolle, Ziele, Kontaktinfos oder eine kurze Biografie.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- weiteres Bild mit kurzer Beschreibung -->
+    <section class="simple-card" aria-labelledby="card-head">
+      <img src="photo2.jpg" alt="Ein wichtiges Motiv" />
+      <div class="caption" id="card-head">Kleine Beschreibung des Bildes — worum es geht oder warum es wichtig ist.</div>
+    </section>
+
+    <!-- Wir suchen dich Box -->
+    <section class="hiring" aria-label="Wir suchen dich">
+      <img src="recruit.jpg" alt="Aufruf: Wir suchen dich" />
+      <div class="text">Wir suchen dich</div>
+    </section>
+
+  </main>
 </body>
 </html>
 
