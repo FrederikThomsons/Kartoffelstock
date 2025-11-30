@@ -57,20 +57,12 @@ h1{font-size:20px;margin:12px 0 10px}
 
 /* Textbox für Geschichte */
 .textbox{
-background:var(--card);
+background-color: #f0f0f0;
 border:1px solid rgba(16,24,40,0.06);
 padding:14px;border-radius:10px;
 min-height:120px;max-height:400px;overflow:auto;
 }
 .textbox{outline: none}
-
-.textboxes{
-background:var(--card);
-border:1px solid rgba(16,24,40,0.06);
-padding:20px;border-radius:30px;
-min-height:140px;max-height:500px;overflow:auto;
-}
-.textbox[contenteditable]{outline: none}
 
 /* Leader section */
 .leader-row{display:flex;gap:18px;align-items:flex-start;margin-top:18px}
@@ -107,18 +99,15 @@ min-height:140px;max-height:500px;overflow:auto;
 <body>
   <main class="page">
 
-    <!-- Flaggen-Bereich -->
     <section class="flag-wrap" aria-labelledby="flag-head">
 
       <img src="Land5.jpg" alt="Landesflagge" class="flag-img" />
-      <h1 id="flag-head">Die Flagge von dem Land</h1>
+      <h1 id="flag-head">Die Flagge von Kardemon</h1>
       <div class="textbox" contenteditable="true" aria-label="Geschichte des Landes">
-        <strong>Kurze Geschichte:</strong>
         <p>Kardemon wurde am 25.11.2025 gegründet. Der selbsternannte Anführer ist Frederik Thomsons, welcher das Land auch gergründet hat. Das Flaggendesign wurde noch am gleichen Tag entworfen und umgesetzt.</p>
       </div>
     </section>
 
-    <!-- Anführer / Über mich -->
     <section class="leader-row" aria-labelledby="leader-head">
       <img src="Land1.jpg" alt="Ich" class="leader-photo" />
       <div class="leader-about">
@@ -134,7 +123,6 @@ min-height:140px;max-height:500px;overflow:auto;
       <div class="caption" id="card-head">Blabla</div>
     </section>
 
-    <!-- Wir suchen dich Box -->
     <section class="hiring" aria-label="Wir suchen dich">
       <img src="Land4.jpg" alt="Aufruf: Wir suchen dich" />
       <div class="text">Wir suchen dich</div>
