@@ -75,16 +75,65 @@ h1{font-size:20px;margin:12px 0 10px}
   width: 450px;
   height: 650px;
 }
+.hiring {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: linear-gradient(90deg,#fff,#fcfeff);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 18px;
+  border: 1px solid rgba(11,94,215,0.06);
+}
 
-.hiring{display:flex;gap:14px;align-items:center;background:linear-gradient(90deg,#fff,#fcfeff);padding:12px;border-radius:10px;margin-top:18px;border:1px solid rgba(11,94,215,0.06)}
-.hiring img{width:110px;height:110px;object-fit:cover;border-radius:8px;flex:0 0 110px}
-.hiring .text{font-weight:600}
+.hiring img {
+  width: 150px;       /* etwas größer als vorher */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.hiring .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hiring .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.hiring .description {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.hiring .population {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width:720px){
+  .hiring {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .hiring img {
+    width: 70%;
+    height: auto;
+  }
+  .hiring .text {
+    align-items: center;
+  }
+}
 
 @media (max-width:720px){
 .leader-row{flex-direction:column;align-items:center}
 .leader-photo{width:100%;height:220px;flex:unset}
-.hiring{flex-direction:column;text-align:center}
-.hiring img{width:70%;height:auto}
 }
 
 .muted{color:var(--muted);font-size:13px}
@@ -140,10 +189,16 @@ h1{font-size:20px;margin:12px 0 10px}
   </section>
 </div>
 
-    <section class="hiring" aria-label="Wir suchen dich">
-      <img src="Land7.jpg" alt="Aufruf: Wir suchen dich" />
-      <div class="text">Wir suchen dich</div>
-    </section>
+<section class="hiring" aria-label="Wir suchen dich">
+  <img src="Land7.jpg" alt="Aufruf: Wir suchen dich" />
+  <div class="text">
+    <div class="title">We want you!</div>
+    <div class="description">
+      Du willst diesem Land beitreten? Dann kontaktiere <a href="mailto:eins.zwei@gmail.com">eins.zwei@gmail.com</a> und schreibe, dass du eine Staatsbürgerschaft in Kardemon willst. Oder kontaktiere mich mündlich, wenn du keine E-Mail schreiben möchtest.
+    </div>
+    <div class="population">BEVÖLKERUNG: 2</div>
+  </div>
+</section>
 
   </main>
 </body>
