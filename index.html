@@ -159,10 +159,10 @@
 <script>
     function checkPassword() {
         const password = document.getElementById('passwordInput').value;
-        const correctPassword = "Kartoffelstock"; // <-- hier dein Passwort eingeben
+        const correctPassword = "Kartoffelstock";  
     
         if (password === correctPassword) {
-            localStorage.setItem('eingeloggt', 'true'); // merken, dass eingeloggt wurde
+            localStorage.setItem('eingeloggt', 'true');
             freischalten();
         } else {
             document.getElementById('wrongPassword').style.display = 'block';
