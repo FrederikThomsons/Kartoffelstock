@@ -75,6 +75,7 @@ h1{font-size:20px;margin:12px 0 10px}
   width: 450px;
   height: 650px;
 }
+    
 .hiring {
   display: flex;
   gap: 20px;
@@ -152,6 +153,58 @@ h1{font-size:20px;margin:12px 0 10px}
 .hymne-btn:hover {
   background: #555555; 
 }
+
+.money-box {
+display: flex;
+flex-direction: column;
+gap: 12px;
+padding: 16px;
+background: #ffffff;
+border-radius: 12px;
+border: 1px solid rgba(0,0,0,0.1);
+width: 450px;
+}
+
+
+.money-header {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 6px;
+}
+
+
+.money-image {
+width: 100%;
+border-radius: 10px;
+}
+
+
+.money-description {
+font-size: 15px;
+line-height: 1.4;
+}
+
+
+.money-extra {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-top: 10px;
+}
+
+
+.extra-item h4 {
+margin: 0;
+font-size: 16px;
+font-weight: bold;
+}
+
+
+.extra-item p {
+margin: 0;
+font-size: 14px;
+}
+    
 </style>
   
   <main class="page">
@@ -192,12 +245,31 @@ h1{font-size:20px;margin:12px 0 10px}
   </section>
 </div>
 
-  <section class="simple-card" aria-labelledby="card-head2">
-    <img src="Land9.jpg" alt="Propagandaposter" />
-    <div class="caption" id="card-head2">Skizze für die Währung</div>
-  </section>
+<section class="card-money" aria-labelledby="card-money-head">
+<div class="money-box">
+<div class="money-header">Währung</div>
+
+
+<img src="Land9.jpg" alt="Skizze der Währung" class="money-image" />
+
+
+<div class="money-description">
+<p>Dies ist die offizielle Skizze der zukünftigen Währung von Kardemon.</p>
 </div>
 
+
+<!-- Hier kannst du später mehr Elemente einfügen -->
+<div class="money-extra">
+<!-- Beispiel:
+<div class="extra-item">
+<h4>Weitere Info</h4>
+<p>Beschreibung...</p>
+</div> -->
+</div>
+</div>
+</section>
+
+  
 <section class="hiring" aria-label="Wir suchen dich">
   <img src="Land7.jpg" alt="Aufruf: Wir suchen dich" />
   <div class="text">
