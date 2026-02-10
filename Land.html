@@ -193,6 +193,24 @@ gap: 10px;
 margin-top: 10px;
 }
 
+.money-button {
+  display: block;          /* macht den Button block-level */
+  margin: 20px auto;       /* zentriert horizontal */
+  padding: 16px 32px;      /* Höhe/Breite des Buttons */
+  font-size: 18px;
+  font-weight: bold;
+  border: none;            /* kein Rahmen */
+  cursor: pointer;
+  background-color: #28a745; /* grün */
+  color: white;
+  border-radius: 0;        /* viereckig, keine abgerundeten Ecken */
+}
+
+.money-button:hover {
+  background-color: #218838; /* etwas dunkleres Grün beim Hover */
+}
+
+
 
 </style>
   
@@ -234,19 +252,10 @@ margin-top: 10px;
   </section>
 </div>
 
-<section class="card-money" aria-labelledby="card-money-head">
-<div class="money-box">
-<div class="money-header">Währung</div>
+<button class="money-button" onclick="window.location.href='wirtschaft.html'">
+  Wirtschaft
+</button>
 
-
-<img src="Land9.jpg" alt="Skizze der Währung" class="money-image" />
-
-
-<div class="money-description">
-<p>Eine Skizze in Farbe, mit Ideen für Münzen und Geldscheine für Kardemon. Weitere, detailietere Ausfürhungen des Geldes werden (wahrscheinlich) noch gemacht. </p>
-</div>
-
-</section>
 
 <section class="hiring" 
   aria-label="Wir suchen dich"> 
