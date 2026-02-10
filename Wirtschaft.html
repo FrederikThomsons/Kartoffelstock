@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Wirtschaft</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: normal;
+            font-size: 16px;
+            margin-top: 5px;
+            color: #555;
+        }
+
+        h3.section-title {
+            text-align: center;
+            font-weight: normal;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .content-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 40px;
+            gap: 20px;
+        }
+
+        .textbox {
+            background-color: #eaeaea;
+            padding: 15px;
+            width: 300px;
+            height: 150px;
+        }
+
+        .content-row img {
+            width: 250px;
+            height: auto;
+        }
+
+        .center-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .center-image img {
+            width: 400px;
+            height: auto;
+        }
+
+        .image-comment {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .calculator-box {
+            width: 420px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .calculator-box h3 {
+            margin-top: 0;
+        }
+
+        .calc-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input, select {
+            padding: 5px;
+            width: 90px;
+        }
+
+        .back-box {
+            width: 120px;
+            margin: 40px auto;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .back-box:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wirtschaft</h1>
+    <h2>die wirtschaft von kardemon</h2>
+
+    <div class="content-row">
+        <div class="textbox">
+            blablabla
+        </div>
+        <img src="bild1.jpg" alt="Wirtschaft Bild">
+    </div>
+
+    <!-- DESIGN-BEREICH -->
+    <h3 class="section-title">Design</h3>
+
+    <div class="center-image">
+        <img src="bild2.jpg" alt="Zentriertes Bild">
+    </div>
+
+    <div class="image-comment">
+        Hier kannst du etwas über das Bild schreiben, zum Beispiel was es darstellt
+        oder warum dieses Design für Kardemon wichtig ist.
+    </div>
+
+    <div class="calculator-box">
+        <h3>Währungsrechner</h3>
+
+        <div class="calc-row">
+            <div>
+                <div>KDM</div>
+                <input type="number" id="kdm" placeholder="0">
+            </div>
+
+            <div>→</div>
+
+            <select id="currency">
+                <option value="eur">Euro</option>
+                <option value="chf">Schweizer Franken</option>
+                <option value="usd">US-Dollar</option>
+            </select>
+
+            <div>=</div>
+
+            <input type="text" id="result" readonly>
+        </div>
+    </div>
+
+    <div class="back-box" onclick="window.location.href='Land.html'">
+        Zurück
+    </div>
+
+    <script>
+        const kdmInput = document.getElementById("kdm");
+        const currencySelect = document.getElementById("currency");
+        const resultInput = document.getElementById("result");
+
+        function calculate() {
+            const kdm = parseFloat(kdmInput.value);
+            if (isNaN(kdm)) {
+                resultInput.value = "";
+                return;
+            }
+
+            let result;
+            if (currencySelect.value === "chf") {
+                result = kdm * 1.02;
+            } else if (currencySelect.value === "usd") {
+                result = kdm * 3.53;
+            } else if (currencySelect.value === "eur") {
+                result = kdm * 1.78;
+            }
+
+            resultInput.value = result.toFixed(2);
+        }
+
+        kdmInput.addEventListener("input", calculate);
+        currencySelect.addEventListener("change", calculate);
+    </script>
+
+</body>
+</html>
