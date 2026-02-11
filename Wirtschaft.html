@@ -109,6 +109,37 @@
         .back-box:hover {
             background-color: #f0f0f0;
         }
+
+        .market-section {
+    background-color: #000;
+    padding: 60px 40px;
+    margin: 60px 0;
+    color: white;
+}
+
+.market-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.left-images, .right-images {
+    display: flex;
+    gap: 20px;
+}
+
+.market-images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+#marketChart {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
     </style>
 </head>
 <body>
@@ -125,6 +156,95 @@
         </div>
         <img src="Wirtschaft1.jpg" alt="Mein Character als Stonks Guy">
     </div>
+
+<div class="market-section">
+
+    <div class="market-images">
+        <div class="left-images">
+            <img src="cardamom.jpg">
+            <img src="shoes.jpg">
+        </div>
+
+        <div class="right-images">
+            <img src="rifle.jpg">
+            <img src="apples.jpg">
+        </div>
+    </div>
+
+    <canvas id="marketChart"></canvas>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('marketChart').getContext('2d');
+
+const marketChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'],
+        datasets: [
+            {
+                label: 'Kardamom',
+                data: [20,22,24,58,67,34,86,87,90,67,87,88],
+                borderColor: '#00ff88',
+                backgroundColor: 'rgba(0,255,136,0.2)',
+                tension: 0.4,
+                fill: true
+            },
+            {
+                label: 'Sturmgewehre',
+                data: [15,4,55,56,57,55,23,78,88,86,88,65],
+                borderColor: '#ff4444',
+                backgroundColor: 'rgba(255,68,68,0.2)',
+                tension: 0.4,
+                fill: true
+            },
+            {
+                label: 'Barfussschuhe',
+                data: [30,31,32,31,31,28,43,48,33,32,33,31],
+                borderColor: '#3399ff',
+                backgroundColor: 'rgba(51,153,255,0.2)',
+                tension: 0.4,
+                fill: true
+            },
+            {
+                label: 'Äpfel',
+                data: [5,50,10,60,13,58,59,60,4,70,6,56],
+                borderColor: '#ffaa00',
+                backgroundColor: 'rgba(255,170,0,0.2)',
+                tension: 0.4,
+                fill: true
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    color: 'white'
+                }
+            }
+        },
+        scales: {
+            x: {
+                ticks: { color: 'white' },
+                grid: { color: 'rgba(255,255,255,0.1)' }
+            },
+            y: {
+                ticks: { color: 'white' },
+                grid: { color: 'rgba(255,255,255,0.1)' }
+            }
+        },
+        animation: {
+            duration: 2000
+        }
+    }
+});
+</script>
+
 
     <!-- DESIGN-BEREICH -->
     <h3 class="section-title">Design</h3>
