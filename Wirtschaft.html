@@ -110,20 +110,19 @@
             background-color: #f0f0f0;
         }
 
-        .black-box {
-            width: 800px;
-    background-color: black;
-    padding: 60px;
-    margin: 40px 0;
+.image-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;   /* zentriert alles */
     align-items: center;
+    gap: 40px;                 /* Abstand zwischen den Bildern */
+    margin: 40px 0;
 }
 
-.black-box img {
-    width: 500px;
+.image-row img {
+    width: 400px;
     height: auto;
 }
+
 
     </style>
 </head>
@@ -143,7 +142,7 @@
 
     </div>
 
-<div class="black-box">
+<div class="image-row">
     <img src="Wirtschaft2.jpg" alt="Links">
     <img src="Wirtschaft3.jpg" alt="Rechts">
 </div>
