@@ -123,6 +123,39 @@
     height: auto;
 }
 
+        .design-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stack-container {
+    width: 400px;
+    height: auto;
+    position: relative;
+}
+
+.stack-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.nav-btn {
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background: white;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+}
+
+
 
     </style>
 </head>
@@ -152,9 +185,16 @@
     <!-- DESIGN-BEREICH -->
     <h3 class="section-title">Design</h3>
 
-    <div class="center-image">
-        <img src="Land9.jpg" alt="Eine Skizze der Währung">
+<div class="design-stack">
+    <button class="nav-btn" onclick="prevImage()">◀</button>
+
+    <div class="stack-container">
+        <img id="designImage" src="Land9.jpg" alt="Design Entwicklung">
     </div>
+
+    <button class="nav-btn" onclick="nextImage()">▶</button>
+</div>
+
 
     <div class="image-comment">
         Hier kannst du etwas über das Bild schreiben, zum Beispiel was es darstellt
@@ -214,6 +254,36 @@
 
         kdmInput.addEventListener("input", calculate);
         currencySelect.addEventListener("change", calculate);
+
+        <script>
+    const images = ["Wirtschaft4.jpg", "Land9.jpg"];
+    let currentIndex = 1; // Start bei Land9 (neueste oben)
+
+    const designImage = document.getElementById("designImage");
+
+    function updateImage() {
+        designImage.style.opacity = 0;
+        setTimeout(() => {
+            designImage.src = images[currentIndex];
+            designImage.style.opacity = 1;
+        }, 150);
+    }
+
+    function prevImage() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateImage();
+        }
+    }
+
+    function nextImage() {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            updateImage();
+        }
+    }
+</script>
+
     </script>
 
 </body>
