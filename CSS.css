@@ -187,10 +187,11 @@ button[type="submit"] {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    width: 250px;
+    width: 300px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .kunst h2 {
     margin-bottom: 15px;
@@ -476,4 +477,5 @@ button[type="submit"]:hover {
     height: auto;
     border-radius: 10px;
 }
+
 
