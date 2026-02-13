@@ -175,8 +175,8 @@ button[type="submit"] {
 }
 
 .kunst-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
     justify-content: center;
     gap: 30px;
     margin: 40px 20px;
@@ -477,5 +477,6 @@ button[type="submit"]:hover {
     height: auto;
     border-radius: 10px;
 }
+
 
 
