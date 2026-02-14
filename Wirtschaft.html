@@ -228,36 +228,36 @@
         Zurück
     </div>
 
-    <script>
-        const kdmInput = document.getElementById("kdm");
-        const currencySelect = document.getElementById("currency");
-        const resultInput = document.getElementById("result");
+<script>
+    const kdmInput = document.getElementById("kdm");
+    const currencySelect = document.getElementById("currency");
+    const resultInput = document.getElementById("result");
 
-        function calculate() {
-            const kdm = parseFloat(kdmInput.value);
-            if (isNaN(kdm)) {
-                resultInput.value = "";
-                return;
-            }
-
-            let result;
-            if (currencySelect.value === "chf") {
-                result = kdm * 1.02;
-            } else if (currencySelect.value === "usd") {
-                result = kdm * 3.53;
-            } else if (currencySelect.value === "eur") {
-                result = kdm * 1.78;
-            }
-
-            resultInput.value = result.toFixed(2);
+    function calculate() {
+        const kdm = parseFloat(kdmInput.value);
+        if (isNaN(kdm)) {
+            resultInput.value = "";
+            return;
         }
 
-        kdmInput.addEventListener("input", calculate);
-        currencySelect.addEventListener("change", calculate);
+        let result;
+        if (currencySelect.value === "chf") {
+            result = kdm * 1.02;
+        } else if (currencySelect.value === "usd") {
+            result = kdm * 3.53;
+        } else if (currencySelect.value === "eur") {
+            result = kdm * 1.78;
+        }
 
-        <script>
+        resultInput.value = result.toFixed(2);
+    }
+
+    kdmInput.addEventListener("input", calculate);
+    currencySelect.addEventListener("change", calculate);
+
+    // 🔹 Bild-Switcher
     const images = ["Wirtschaft4.jpg", "Land9.jpg"];
-    let currentIndex = 1; // Start bei Land9 (neueste oben)
+    let currentIndex = 1; 
 
     const designImage = document.getElementById("designImage");
 
@@ -283,8 +283,6 @@
         }
     }
 </script>
-
-    </script>
 
 </body>
 </html>
