@@ -197,8 +197,8 @@
 
 
     <div class="image-comment">
-        Hier kannst du etwas über das Bild schreiben, zum Beispiel was es darstellt
-        oder warum dieses Design für Kardemon wichtig ist.
+        Hier ist das aktuelle Desigm des Geldes, und wie es sich von der ursprünglichen Skizze geändert hat, es wird
+        noch weiterentwickelt
     </div>
 
     <div class="calculator-box">
@@ -229,23 +229,30 @@
     </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // --- Währungsrechner ---
     const kdmInput = document.getElementById("kdm");
     const currencySelect = document.getElementById("currency");
     const resultInput = document.getElementById("result");
 
     function calculate() {
         const kdm = parseFloat(kdmInput.value);
+
         if (isNaN(kdm)) {
             resultInput.value = "";
             return;
         }
 
-        let result;
+        let result = 0;
+
         if (currencySelect.value === "chf") {
             result = kdm * 1.02;
-        } else if (currencySelect.value === "usd") {
+        } 
+        else if (currencySelect.value === "usd") {
             result = kdm * 3.53;
-        } else if (currencySelect.value === "eur") {
+        } 
+        else if (currencySelect.value === "eur") {
             result = kdm * 1.78;
         }
 
@@ -255,9 +262,10 @@
     kdmInput.addEventListener("input", calculate);
     currencySelect.addEventListener("change", calculate);
 
-    // 🔹 Bild-Switcher
+
+    // --- Bild-Switcher ---
     const images = ["Wirtschaft4.jpg", "Land9.jpg"];
-    let currentIndex = 1; 
+    let currentIndex = 1;
 
     const designImage = document.getElementById("designImage");
 
@@ -269,20 +277,23 @@
         }, 150);
     }
 
-    function prevImage() {
+    window.prevImage = function () {
         if (currentIndex > 0) {
             currentIndex--;
             updateImage();
         }
-    }
+    };
 
-    function nextImage() {
+    window.nextImage = function () {
         if (currentIndex < images.length - 1) {
             currentIndex++;
             updateImage();
         }
-    }
+    };
+
+});
 </script>
+
 
 </body>
 </html>
