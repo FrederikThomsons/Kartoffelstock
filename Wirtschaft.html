@@ -155,11 +155,32 @@
     background: #f0f0f0;
 }
 
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Schwarze Seitenbalken */
+}
+
+        .page-wrapper {
+    background-color: white;
+    max-width: 1100px;   /* Breite vom Content */
+    margin: 0 auto;      /* Zentriert */
+    padding: 30px 40px;  /* Abstand innen */
+    min-height: 100vh;   /* Füllt Höhe */
+    
+}
+
+        .page-wrapper {
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
 
 
     </style>
 </head>
 <body>
+
+    <div class="page-wrapper">
 
     <h1>Wirtschaft</h1>
     <h2>Die Wirtschaft von Kardemon...? Also im Grunde genommen Geld.</h2>
@@ -227,6 +248,8 @@
     <div class="back-box" onclick="window.location.href='Land.html'">
         Zurück
     </div>
+</div>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
