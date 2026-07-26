@@ -71,6 +71,41 @@
             color: black;
         }
 
+        .datei-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.datei-icon {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+
+.datei-icon:hover {
+    transform: scale(1.05);
+    background-color: #e8e8e8;
+}
+
+
+.datei-icon:first-line {
+    font-size: 40px;
+}
 
     </style>
 
@@ -113,11 +148,13 @@
     <h2>Erster Schritt</h2>
 
     <p>
-        Zuerst muss man sich den Mu-Editor online downloaden. Dann GZDoom und die Doom.WAD, welche man dann in den GZDoom Ordner zieht. Dann lädt man sich die neuste Version von Python herunter. 
+        Zuerst muss man sich den Mu-Editor online downloaden. Dann GZDoom und die Doom.WAD,
+        welche man danach in den GZDoom Ordner zieht. Danach lädt man sich die neuste Version
+        von Python herunter.
     </p>
 
-        <div class="projekt-datei">
 </div>
+
 
 
 <div class="projekt-block">
@@ -125,15 +162,13 @@
     <h2>Zweiter Schritt</h2>
 
     <p>
-        Dann öffnet man die PowerShell und gibt dort "pip install pyserial mss pillow pyautogui pynput" ein. Warten bis alles heruntergeladen ist. 
+        Dann öffnet man die PowerShell und gibt dort 
+        <b>pip install pyserial mss pillow pyautogui pynput</b> ein.
+        Warten bis alles heruntergeladen ist.
     </p>
 
-        <div class="projekt-datei">
-
-        <a href="Datei.zip" download>
-            Datei herunterladen
-        </a>
 </div>
+
 
 
 <div class="projekt-block">
@@ -141,86 +176,122 @@
     <h2>Dritter Schritt</h2>
 
     <p>
-        Lade dir die unten angegebenen Dateien auf den Gerät herunter und platziere sie auf dem Desktop. Öffne die PowerShell und gebe dort "mode" ein. Verändere nach Bedürfnissen dann im Python code diesen Abschnitt hier: "microbit = serial.Serial("COM3", 115200)" 
+        Lade dir die unten angegebenen Dateien auf das Gerät herunter und platziere sie auf
+        dem Desktop. Öffne die PowerShell und gebe dort "mode" ein.
+        Verändere danach im Python-Code diesen Abschnitt:
+        <br><br>
+        <b>microbit = serial.Serial("COM3", 115200)</b>
     </p>
 
-        <div class="projekt-datei">
 
-        <a href="find_microbit.py" download>
-            Datei herunterladen
+    <div class="datei-container">
+
+        <a href="find_microbit.py" download class="datei-icon">
+            📄<br>
+            find_microbit.py
         </a>
 
-        <div class="projekt-datei">
-
-        <a href="doom_screen.py" download>
-            Datei herunterladen
+        <a href="doom_screen.py" download class="datei-icon">
+            📄<br>
+            doom_screen.py
         </a>
 
-        <div class="microdoom.py">
-
-        <a href="Datei.zip" download>
-            Datei herunterladen
+        <a href="microdoom.py" download class="datei-icon">
+            📄<br>
+            microdoom.py
         </a>
+
+    </div>
+
 </div>
+
+
+
 
 <div class="projekt-block">
 
     <h2>Vierter Schritt</h2>
 
     <p>
-        Lade dir die untere Datei herunter, und öffne sie auf dem Mu-Editor. Schliesse den Microbit per USB an deinen Computer an und klicke flash. Nach dem diese Aktion beendet wurde, musst du den Microbit einmal aus und an stecken, für einen Neustart.
+        Lade dir die untere Datei herunter und öffne sie im Mu-Editor.
+        Schliesse den Microbit per USB an deinen Computer an und klicke auf "flash".
+        Nach dieser Aktion musst du den Microbit einmal aus- und wieder einstecken,
+        damit er neu startet.
     </p>
 
-        <div class="projekt-datei">
 
-        <a href="doomtest_mu.py" download>
-            Datei herunterladen
+    <div class="datei-container">
+
+        <a href="doomtest_mu.py" download class="datei-icon">
+            📄<br>
+            doomtest_mu.py
         </a>
+
+    </div>
+
 </div>
+
+
+
 
 <div class="projekt-block">
 
     <h2>Fünfter Schritt</h2>
 
     <p>
-        Öffne nun Doom, indem du doppelt auf das GZDoom Programm klickst. Gehe in die Optionen und stelle dort ein, das "TurnLeft" mit der linken Pfeiltaste und "TurnRight" mit der rechten Pfeiltaste bedient werden sollen. Zwinge wenn nötig das Programm in den Fenstermodus, durch Alt + Enter oder F11.
+        Öffne nun Doom, indem du doppelt auf das GZDoom Programm klickst.
+        Gehe in die Optionen und stelle ein, dass "TurnLeft" mit der linken Pfeiltaste
+        und "TurnRight" mit der rechten Pfeiltaste bedient werden.
+        Zwinge wenn nötig das Programm in den Fenstermodus durch Alt + Enter oder F11.
     </p>
+
 </div>
 
-<a href="Geschichte.html" class="zurueck-button">
-    Zurück
-</a>
+
+
 
 <div class="projekt-block">
 
     <h2>Sechster Schritt</h2>
 
     <p>
-        Öffne erneut die PowerShell. Gib "cd OneDrive\Desktop" ein. Dann gebe "python microdoom.py" ein. Öffne Doom und starte ein neues Spiel. Die Controls sind wie folgt: 
-        <br>
+        Öffne erneut die PowerShell. Gib 
+        <b>cd OneDrive\Desktop</b> ein.
+        Danach gebe <b>python microdoom.py</b> ein.
+        
+        Öffne Doom und starte ein neues Spiel.
+        Die Controls sind:
+        <br><br>
         A = Schiessen
         <br>
         B = Laufen
         <br>
-        A + B = Aktonen ausführen
+        A + B = Aktionen ausführen
         <br>
         Links/rechts kippen = Nach links/rechts schauen
     </p>
+
+</div>
+
+
+
 
 <div class="projekt-block">
 
     <h2>Siebter Schritt</h2>
 
     <p>
-       Enjoy. Oder versuche Doom durchzuspielen.
+        Enjoy. Oder versuche Doom durchzuspielen.
     </p>
+
 </div>
-    
-</div>
+
+
 
 <a href="Geschichte.html" class="zurueck-button">
     Zurück
 </a>
+
 
 </body>
 
