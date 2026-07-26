@@ -1,51 +1,187 @@
 <!DOCTYPE html>
 
 <html lang="de">
-  
+
 <head>
-  <meta charset="UTF-8">
-  <title>Doom auf einem Microbit</title>
-  <link rel="stylesheet" href="CSS.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom auf einem Microbit</title>
+    <link rel="stylesheet" href="CSS.css">
+
+    <style>
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+        }
+
+        .beschreibung-box {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+
+
+        .video-container {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+
+        .projekt-block {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        .projekt-block img,
+        .projekt-block video,
+        .projekt-block iframe {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+
+        .projekt-datei {
+            margin-top: 15px;
+        }
+
+
+        .zurueck-button {
+            display: block;
+            width: fit-content;
+            margin: 50px auto;
+            padding: 10px 20px;
+            background-color: #ddd;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+    </style>
+
 </head>
+
 
 <body>
 
-  
-<div class="bild-container">
 
-  <img src="Seite2.jpg" alt="Flo sitzt auf einem Klo im Zoo">
-<br>
-<br>
-  <img src="Seite3.jpg" alt="Wurm mit Fisch auf dem Tisch">
-<br>
-<br>
-  <img src="Seite4.jpg" alt="Wurm und Flo im Zoo">
-<br>
-<br>
-  <img src="Seite5.jpg" alt="Wurm träumt von Schafen">
-<br>
-<br>
-  <img src="Seite6.jpg" alt="Wurm und Flo telefonieren">
-<br>
-<br>
-  <img src="Seite7.jpg" alt="Wurm und Flo erschrecken sich vor einem Pferd mit vier Köpfen">
-<br>
-<br>
-  <img src="Seite8.jpg" alt="Wurm und Flo reden über Ferien und eine Hand">
-<br>
-<br>
-  <img src="Seite9.jpg" alt="Wurm und Flo im Flugzeug">
-<br>
-<br>
-  <img src="Seite10.jpg" alt="Grosse Hand mit Loch in der Mitte führt zur Ohnmacht von Flo und Wurm">
-<br>
-<br>
-  <img src="Seite11.jpg" alt="Wurm und Flo treffen ihre Verwandten">
+<h1>Doom auf einem Microbit</h1>
+
+
+<div class="beschreibung-box">
+
+    <h2>Über das Projekt</h2>
+
+    <p>
+        Hier kannst du einen längeren Text über dein Projekt schreiben.
+        Zum Beispiel erklären, wie du Doom auf dem Microbit umgesetzt hast,
+        welche Probleme entstanden sind und was du gelernt hast.
+    </p>
 
 </div>
 
-<div class="header-bereich">
-  <a href="Geschichte.html" class="zurueck-button">Zurück</a>
+
+
+<div class="video-container">
+
+    <h2>Video</h2>
+
+    <video controls>
+        <source src="Video.mp4" type="video/mp4">
+        Dein Browser unterstützt dieses Video nicht.
+    </video>
+
+</div>
+
+
+
+
+<div class="projekt-block">
+
+    <h2>Erster Abschnitt</h2>
+
+    <p>
+        Beschreibung des ersten Teils. Hier kann stehen, was auf dem Bild,
+        im Code oder in der Datei zu sehen ist.
+    </p>
+
+    <img src="Seite2.jpg" alt="Bild">
+
+</div>
+
+
+
+
+<div class="projekt-block">
+
+    <h2>Zweiter Abschnitt</h2>
+
+    <p>
+        Weitere Beschreibung.
+    </p>
+
+    <img src="Seite3.jpg" alt="Bild">
+
+</div>
+
+
+
+
+<div class="projekt-block">
+
+    <h2>Code</h2>
+
+    <p>
+        Hier kann eine Datei oder ein Download eingefügt werden.
+    </p>
+
+    <div class="projekt-datei">
+
+        <a href="Datei.zip" download>
+            Datei herunterladen
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="projekt-block">
+
+    <h2>Weiterer Abschnitt</h2>
+
+    <p>
+        Noch mehr Text, Bilder oder andere Inhalte.
+    </p>
+
+</div>
+
+
+
+
+<a href="Geschichte.html" class="zurueck-button">
+    Zurück
+</a>
+
+
 
 </body>
+
 </html>
