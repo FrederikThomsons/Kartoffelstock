@@ -13,9 +13,10 @@
 body {
 
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
+    margin:0;
+    padding:0;
+    background:white;
+    color:black;
 
 }
 
@@ -23,11 +24,9 @@ body {
 
 .page-wrapper {
 
-    background-color: white;
-    width: 1000px;
-    padding: 20px;
-    margin: auto;
-    min-height: 100vh;
+    width:1000px;
+    margin:auto;
+    padding:20px;
 
 }
 
@@ -35,9 +34,9 @@ body {
 
 h1 {
 
-    text-align: center;
-    margin-top: 40px;
-    font-size: 40px;
+    text-align:center;
+    margin-top:40px;
+    font-size:40px;
 
 }
 
@@ -54,11 +53,13 @@ h1 {
 
 
 
-/* grosse Kategorie */
+
+/* Hauptgesetzbox */
+
 
 .gesetz-abschnitt {
 
-    max-width:800px;
+    max-width:850px;
     margin:40px auto;
     padding:20px;
     background:#f0f0f0;
@@ -68,39 +69,21 @@ h1 {
 
 
 
-.gesetz-abschnitt h2 {
-
-    text-align:center;
-    margin-top:0;
-
-}
-
-
-
-
-
-/* einzelne Gesetze */
-
-
-.gesetz {
-
-    background:white;
-    margin-top:15px;
-    border-radius:10px;
-    padding:15px;
-    border:1px solid #ddd;
-
-}
-
-
-
-.gesetz-titel {
+.gesetz-kopf {
 
     display:flex;
     justify-content:space-between;
     align-items:center;
     cursor:pointer;
-    font-size:18px;
+
+}
+
+
+
+.gesetz-kopf h2 {
+
+    margin:0;
+    font-size:24px;
 
 }
 
@@ -108,322 +91,12 @@ h1 {
 
 .pfeil {
 
-    font-size:20px;
-
-}
-
-
-
-.gesetz-text {
-
-    display:none;
-    margin-top:15px;
-    color:#444;
-    line-height:1.5;
-
-}
-
-
-
-.gesetz:hover {
-
-    background:#fafafa;
+    font-size:25px;
 
 }
 
 
 
 
-.zurueck-button {
 
-    width:120px;
-    margin:40px auto;
-    padding:10px;
-    background:#f0f0f0;
-    border-radius:10px;
-    text-align:center;
-    cursor:pointer;
-
-}
-
-
-
-.zurueck-button:hover {
-
-    background:#e0e0e0;
-
-}
-
-
-
-</style>
-
-
-</head>
-
-
-
-<body>
-
-
-<div class="page-wrapper">
-
-
-
-<h1>Gesetze von Kardemon</h1>
-
-<p class="subtitle">
-Die wichtigsten Regeln und Gesetze des Landes Kardemon.
-</p>
-
-
-
-
-
-<div class="gesetz-abschnitt">
-
-
-<h2>Staatsgesetze</h2>
-
-
-
-<div class="gesetz">
-
-<div class="gesetz-titel" onclick="toggle(this)">
-
-Staatsaufbau
-
-<span class="pfeil">▼</span>
-
-</div>
-
-
-<div class="gesetz-text">
-
-Kardemon ist eine unabhängige Nation mit eigener Regierung.
-Die Aufgaben des Staates sind die Sicherheit, Verwaltung und Entwicklung des Landes sicherzustellen.
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="gesetz">
-
-<div class="gesetz-titel" onclick="toggle(this)">
-
-Gesetzgebung
-
-<span class="pfeil">▼</span>
-
-</div>
-
-
-<div class="gesetz-text">
-
-Neue Gesetze müssen durch die zuständigen Behörden geprüft und bestätigt werden,
-bevor sie offiziell in Kraft treten.
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="gesetz-abschnitt">
-
-
-<h2>Bürgerrechte</h2>
-
-
-
-
-<div class="gesetz">
-
-
-<div class="gesetz-titel" onclick="toggle(this)">
-
-Recht auf Freiheit
-
-<span class="pfeil">▼</span>
-
-</div>
-
-
-<div class="gesetz-text">
-
-Jeder Bürger von Kardemon besitzt grundlegende Rechte wie persönliche Freiheit,
-Schutz der eigenen Person und freie Meinungsäusserung.
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="gesetz">
-
-
-<div class="gesetz-titel" onclick="toggle(this)">
-
-Gleichheit vor dem Gesetz
-
-<span class="pfeil">▼</span>
-
-</div>
-
-
-<div class="gesetz-text">
-
-Alle Bürger werden unabhängig von Herkunft oder Status gleich behandelt.
-Das Gesetz gilt für jede Person innerhalb des Landes.
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="gesetz-abschnitt">
-
-
-<h2>Wirtschaftsgesetze</h2>
-
-
-
-
-<div class="gesetz">
-
-
-<div class="gesetz-titel" onclick="toggle(this)">
-
-Währungsgesetz
-
-<span class="pfeil">▼</span>
-
-</div>
-
-
-<div class="gesetz-text">
-
-Die offizielle Währung Kardemons ist Kademolien (kdm).
-Die Stabilität der Währung wird durch staatliche Kontrolle gesichert.
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="gesetz">
-
-
-<div class="gesetz-titel" onclick="toggle(this)">
-
-Handelsgesetz
-
-<span class="pfeil">▼</span>
-
-</div>
-
-
-<div class="gesetz-text">
-
-Der Handel mit anderen Ländern ist erlaubt und wird durch den Staat geregelt.
-Besonders wichtige Exporte werden geschützt und gefördert.
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="zurueck-button" onclick="window.location.href='Land.html'">
-
-Zurück
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<script>
-
-
-function toggle(element){
-
-
-let text = element.nextElementSibling;
-let arrow = element.querySelector(".pfeil");
-
-
-if(text.style.display==="block"){
-
-text.style.display="none";
-arrow.innerHTML="▼";
-
-}
-
-else{
-
-text.style.display="block";
-arrow.innerHTML="▲";
-
-}
-
-
-}
-
-
-
-</script>
-
-
-
-</body>
-
-</html>
+/* Inhalt unter Haupttitel
