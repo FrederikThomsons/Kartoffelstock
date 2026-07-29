@@ -1,321 +1,497 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Wirtschaft</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #000;
-        }
+<meta charset="UTF-8">
+<title>Wirtschaft</title>
 
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        h2 {
-            text-align: center;
-            font-weight: normal;
-            font-size: 16px;
-            margin-top: 5px;
-            color: #555;
-        }
-
-        h3.section-title {
-            text-align: center;
-            font-weight: normal;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        .content-row {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 40px;
-            gap: 20px;
-        }
-
-        .textbox {
-            background-color: #eaeaea;
-            padding: 15px;
-            width: 300px;
-        }
-
-
-       .content-row img {
-            width: 500px;
-            height: 100%;
-            object-fit: cover;
-       }
-
-        .center-image {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .center-image img {
-            width: 400px;
-            height: auto;
-        }
-
-        .image-comment {
-            text-align: center;
-            font-size: 14px;
-            color: #555;
-            margin-top: 10px;
-            margin-bottom: 40px;
-        }
-
-        .calculator-box {
-            width: 420px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
-
-        .calculator-box h3 {
-            margin-top: 0;
-        }
-
-        .calc-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        input, select {
-            padding: 5px;
-            width: 90px;
-        }
-
-        .back-box {
-            width: 120px;
-            margin: 40px auto;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #000;
-            cursor: pointer;
-        }
-
-        .back-box:hover {
-            background-color: #f0f0f0;
-        }
-
-.image-row {
-    display: flex;
-    justify-content: center;   /* zentriert alles */
-    align-items: center;
-    gap: 40px;                 /* Abstand zwischen den Bildern */
-    margin: 40px 0;
-}
-
-.image-row img {
-    width: 400px;
-    height: auto;
-}
-
-        .design-stack {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.stack-container {
-    width: 400px;
-    height: auto;
-    position: relative;
-}
-
-.stack-container img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
-}
-
-.nav-btn {
-    font-size: 20px;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: 1px solid #000;
-    background: white;
-}
-
-.nav-btn:hover {
-    background: #f0f0f0;
-}
+<style>
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #333;
+    color: black;
 }
 
 
 .page-wrapper {
     background-color: white;
-    width: 1000px;       /* feste Breite */
+    width: 1000px;
     padding: 20px;
-    margin: 0px auto;   /* Abstand oben + zentriert */
+    margin: auto;
     min-height: 100vh;
 }
 
 
-    </style>
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+
+h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+
+
+.projekt-block {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.projekt-block img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.content-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.textbox {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+}
+
+
+
+.image-row {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+
+.image-row img {
+    width:350px;
+    border-radius:10px;
+}
+
+
+
+.section-title {
+    text-align:center;
+    margin-top:40px;
+}
+
+
+
+
+.design-stack {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+
+}
+
+
+.stack-container {
+
+    width:500px;
+
+}
+
+
+.stack-container img {
+
+    width:100%;
+    border-radius:10px;
+    transition:opacity 0.3s;
+
+}
+
+
+
+.nav-btn {
+
+    font-size:25px;
+    padding:10px 15px;
+    cursor:pointer;
+    border:1px solid #ccc;
+    background:white;
+    border-radius:10px;
+
+}
+
+
+.nav-btn:hover {
+
+    background:#e8e8e8;
+
+}
+
+
+
+.image-comment {
+
+    text-align:center;
+    color:#555;
+    margin:30px auto;
+    max-width:700px;
+
+}
+
+
+
+.calculator-box {
+
+    max-width:500px;
+    margin:30px auto;
+    padding:20px;
+    background:#f0f0f0;
+    border-radius:10px;
+    text-align:center;
+
+}
+
+
+
+.calc-row {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+
+}
+
+
+
+input, select {
+
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #ccc;
+
+}
+
+
+
+.back-box {
+
+    width:120px;
+    margin:40px auto;
+    padding:10px;
+    text-align:center;
+    background:#f0f0f0;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+
+.back-box:hover {
+
+    background:#e0e0e0;
+
+}
+
+
+</style>
+
 </head>
+
+
 <body>
 
-    <div class="page-wrapper">
+<div class="page-wrapper">
 
-    <h1>Wirtschaft</h1>
-    <h2>Die Wirtschaft von Kardemon...? Also im Grunde genommen Geld.</h2>
 
-    <div class="content-row">
-        <div class="textbox">
-            Die Wirtschaft ist ein sehr zentraler Teil des Landes Kardemon, da es als eines der reichsten Länder
-            der Welt zählt. Die Währung nennt sich Kademolien, abgekürzt kdm. Bei aktuellem Stand am 11.02.2026 steht sie mit einem Markwert von 1 kdm = 3.53 USD, wodurch 
-            die Währung im globalen Handel sehr stabil ist, was vor allem auf den starken Export von Kardemon zurückzuführen ist. Der grösste Export von Kardemon sind Kardamomkerne
-            (hmm) und Sturmgewehre. Obwohl der Export der beiden Produkte vorerst gering war, konnte nach nur einem Jahr der Export vervielfacht werden (Grafik unten links). 
-            So stieg der verkauf der Produkte im Ausland ernorm an, wodurch 62% des Exports nur aus ihnen besteht (Grafik unten rechts).
-        </div>
-        <img src="Wirtschaft1.jpg" alt="Mein Character als Stonks Guy">
+<h1>Wirtschaft</h1>
 
-    </div>
+<h2>
+Die Wirtschaft von Kardemon...? Also im Grunde genommen Geld.
+</h2>
+
+
+
+<div class="projekt-block">
+
+<h2>Über die Wirtschaft</h2>
+
+
+<div class="content-row">
+
+<div class="textbox">
+
+Die Wirtschaft ist ein sehr zentraler Teil des Landes Kardemon, da es als eines der reichsten Länder
+der Welt zählt. Die Währung nennt sich Kademolien, abgekürzt kdm. Bei aktuellem Stand am 11.02.2026 steht sie mit einem Markwert von 1 kdm = 3.53 USD, wodurch 
+die Währung im globalen Handel sehr stabil ist, was vor allem auf den starken Export von Kardemon zurückzuführen ist. Der grösste Export von Kardemon sind Kardamomkerne
+(hmm) und Sturmgewehre. Obwohl der Export der beiden Produkte vorerst gering war, konnte nach nur einem Jahr der Export vervielfacht werden (Grafik unten links). 
+So stieg der verkauf der Produkte im Ausland ernorm an, wodurch 62% des Exports nur aus ihnen besteht (Grafik unten rechts).
+
+</div>
+
+
+<img src="Wirtschaft1.jpg">
+
+</div>
+
+</div>
+
+
+
+
+<div class="projekt-block">
+
+<h2>Exportdiagramme</h2>
 
 <div class="image-row">
-    <img src="Wirtschaft2.jpg" alt="Links">
-    <img src="Wirtschaft3.jpg" alt="Rechts">
+
+<img src="Wirtschaft2.jpg">
+
+<img src="Wirtschaft3.jpg">
+
+</div>
+
 </div>
 
 
-    <!-- DESIGN-BEREICH -->
-    <h3 class="section-title">Design</h3>
+
+
+
+<div class="projekt-block">
+
+
+<h2>Design</h2>
+
 
 <div class="design-stack">
-    <button class="nav-btn" onclick="prevImage()">◀</button>
 
-    <div class="stack-container">
-        <img id="designImage" src="Land9.jpg" alt="Design Entwicklung">
-    </div>
 
-    <button class="nav-btn" onclick="nextImage()">▶</button>
+<button class="nav-btn" onclick="prevImage()">◀</button>
+
+
+<div class="stack-container">
+
+<img id="designImage" src="Land9.jpg">
+
 </div>
+
+
+<button class="nav-btn" onclick="nextImage()">▶</button>
+
+
+</div>
+
+
+<p class="image-comment">
+
+Hier ist das aktuelle Desigm des Geldes, und wie es sich von der ursprünglichen Skizze geändert hat, es wird
+noch weiterentwickelt
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="projekt-block">
+
+
+<h2>Währungsrechner</h2>
+
+
+<div class="calc-row">
+
+
+<div>
+
+KDM
+
 <br>
-        <br>
-        <br>
-        <br>
 
+<input type="number" id="kdm" placeholder="0">
 
-
-    <div class="image-comment">
-        Hier ist das aktuelle Desigm des Geldes, und wie es sich von der ursprünglichen Skizze geändert hat, es wird
-        noch weiterentwickelt
-    </div>
-
-    <div class="calculator-box">
-        <h3>Währungsrechner</h3>
-
-        <div class="calc-row">
-            <div>
-                <div>KDM</div>
-                <input type="number" id="kdm" placeholder="0">
-            </div>
-
-            <div>→</div>
-
-            <select id="currency">
-                <option value="eur">Euro</option>
-                <option value="chf">Schweizer Franken</option>
-                <option value="usd">US-Dollar</option>
-            </select>
-
-            <div>=</div>
-
-            <input type="text" id="result" readonly>
-        </div>
-    </div>
-
-    <div class="back-box" onclick="window.location.href='Land.html'">
-        Zurück
-    </div>
 </div>
+
+
+<div>→</div>
+
+
+<select id="currency">
+
+<option value="eur">Euro</option>
+
+<option value="chf">Schweizer Franken</option>
+
+<option value="usd">US-Dollar</option>
+
+</select>
+
+
+<div>=</div>
+
+
+<input type="text" id="result" readonly>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="back-box" onclick="window.location.href='Land.html'">
+
+Zurück
+
+</div>
+
+
+</div>
+
+
+
+
 
 
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    // --- Währungsrechner ---
-    const kdmInput = document.getElementById("kdm");
-    const currencySelect = document.getElementById("currency");
-    const resultInput = document.getElementById("result");
 
-    function calculate() {
-        const kdm = parseFloat(kdmInput.value);
-
-        if (isNaN(kdm)) {
-            resultInput.value = "";
-            return;
-        }
-
-        let result = 0;
-
-        if (currencySelect.value === "chf") {
-            result = kdm * 1.02;
-        } 
-        else if (currencySelect.value === "usd") {
-            result = kdm * 3.53;
-        } 
-        else if (currencySelect.value === "eur") {
-            result = kdm * 1.78;
-        }
-
-        resultInput.value = result.toFixed(2);
-    }
-
-    kdmInput.addEventListener("input", calculate);
-    currencySelect.addEventListener("change", calculate);
+const kdmInput=document.getElementById("kdm");
+const currencySelect=document.getElementById("currency");
+const resultInput=document.getElementById("result");
 
 
-    // --- Bild-Switcher ---
-    const images = ["Wirtschaft4.jpg", "Land9.jpg"];
-    let currentIndex = 1;
+function calculate(){
 
-    const designImage = document.getElementById("designImage");
+const kdm=parseFloat(kdmInput.value);
 
-    function updateImage() {
-        designImage.style.opacity = 0;
-        setTimeout(() => {
-            designImage.src = images[currentIndex];
-            designImage.style.opacity = 1;
-        }, 150);
-    }
 
-    window.prevImage = function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateImage();
-        }
-    };
+if(isNaN(kdm)){
 
-    window.nextImage = function () {
-        if (currentIndex < images.length - 1) {
-            currentIndex++;
-            updateImage();
-        }
-    };
+resultInput.value="";
+return;
+
+}
+
+
+let result=0;
+
+
+if(currencySelect.value==="chf"){
+
+result=kdm*1.02;
+
+}
+
+else if(currencySelect.value==="usd"){
+
+result=kdm*3.53;
+
+}
+
+else if(currencySelect.value==="eur"){
+
+result=kdm*1.78;
+
+}
+
+
+resultInput.value=result.toFixed(2);
+
+
+}
+
+
+kdmInput.addEventListener("input",calculate);
+currencySelect.addEventListener("change",calculate);
+
+
+
+
+const images=["Wirtschaft4.jpg","Land9.jpg"];
+
+let currentIndex=1;
+
+
+const designImage=document.getElementById("designImage");
+
+
+
+function updateImage(){
+
+designImage.style.opacity=0;
+
+
+setTimeout(()=>{
+
+designImage.src=images[currentIndex];
+
+designImage.style.opacity=1;
+
+
+},150);
+
+
+}
+
+
+
+window.prevImage=function(){
+
+if(currentIndex>0){
+
+currentIndex--;
+
+updateImage();
+
+}
+
+}
+
+
+
+window.nextImage=function(){
+
+if(currentIndex<images.length-1){
+
+currentIndex++;
+
+updateImage();
+
+}
+
+}
+
+
 
 });
+
+
 </script>
 
 
