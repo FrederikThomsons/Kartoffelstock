@@ -1,102 +1,154 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
 <title>Wirtschaft</title>
 
+
 <style>
 
+
 body {
+
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: white;
     color: black;
+
 }
 
 
+
 .page-wrapper {
-    background-color: white;
+
     width: 1000px;
-    padding: 20px;
     margin: auto;
-    min-height: 100vh;
+    padding: 20px;
+
 }
 
 
 
 h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 40px;
+
+    text-align:center;
+    margin-top:40px;
+    font-size:40px;
+
 }
 
 
-h2 {
-    text-align: center;
-    font-weight: normal;
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 40px;
+
+.subtitle {
+
+    text-align:center;
+    color:#555;
+    margin-bottom:40px;
+
 }
 
+
+
+
+
+/* normale Projektboxen */
 
 
 .projekt-block {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    text-align: center;
+
+    max-width:800px;
+    margin:40px auto;
+    padding:20px;
+    background:#f0f0f0;
+    border-radius:10px;
+    text-align:center;
+
 }
 
 
-.projekt-block img {
-    max-width: 100%;
-    border-radius: 10px;
+
+.projekt-block h2 {
+
+    margin-top:0;
+
 }
 
+
+
+
+
+/* Wirtschaft Text + Bild */
 
 
 .content-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+
 }
+
 
 
 .textbox {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    text-align: left;
+
+    width:400px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:left;
+    line-height:1.5;
+
 }
 
+
+
+.content-row img {
+
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:10px;
+
+}
+
+
+
+
+
+/* Exportbilder ohne Box */
 
 
 .image-row {
+
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:40px;
+    margin:40px auto;
+
 }
+
 
 
 .image-row img {
+
     width:350px;
-    border-radius:10px;
+    height:350px;
+    object-fit:contain;
+
 }
 
 
 
-.section-title {
-    text-align:center;
-    margin-top:40px;
-}
 
 
+
+
+/* Design Bereich */
 
 
 .design-stack {
@@ -109,16 +161,21 @@ h2 {
 }
 
 
+
 .stack-container {
 
     width:500px;
+    height:500px;
 
 }
 
 
+
 .stack-container img {
 
-    width:100%;
+    width:500px;
+    height:500px;
+    object-fit:contain;
     border-radius:10px;
     transition:opacity 0.3s;
 
@@ -138,29 +195,36 @@ h2 {
 }
 
 
+
 .nav-btn:hover {
 
-    background:#e8e8e8;
+    background:#eee;
 
 }
+
 
 
 
 .image-comment {
 
-    text-align:center;
     color:#555;
-    margin:30px auto;
-    max-width:700px;
+    margin-top:30px;
 
 }
 
 
 
+
+
+
+
+/* Rechner */
+
+
 .calculator-box {
 
     max-width:500px;
-    margin:30px auto;
+    margin:40px auto;
     padding:20px;
     background:#f0f0f0;
     border-radius:10px;
@@ -191,6 +255,12 @@ input, select {
 
 
 
+
+
+
+/* zurück */
+
+
 .back-box {
 
     width:120px;
@@ -204,11 +274,13 @@ input, select {
 }
 
 
+
 .back-box:hover {
 
-    background:#e0e0e0;
+    background:#ddd;
 
 }
+
 
 
 </style>
@@ -216,59 +288,80 @@ input, select {
 </head>
 
 
+
 <body>
+
 
 <div class="page-wrapper">
 
 
+
 <h1>Wirtschaft</h1>
 
-<h2>
+<p class="subtitle">
 Die Wirtschaft von Kardemon...? Also im Grunde genommen Geld.
-</h2>
+</p>
+
+
+
 
 
 
 <div class="projekt-block">
 
+
 <h2>Über die Wirtschaft</h2>
+
 
 
 <div class="content-row">
 
+
 <div class="textbox">
+
 
 Die Wirtschaft ist ein sehr zentraler Teil des Landes Kardemon, da es als eines der reichsten Länder
 der Welt zählt. Die Währung nennt sich Kademolien, abgekürzt kdm. Bei aktuellem Stand am 11.02.2026 steht sie mit einem Markwert von 1 kdm = 3.53 USD, wodurch 
 die Währung im globalen Handel sehr stabil ist, was vor allem auf den starken Export von Kardemon zurückzuführen ist. Der grösste Export von Kardemon sind Kardamomkerne
 (hmm) und Sturmgewehre. Obwohl der Export der beiden Produkte vorerst gering war, konnte nach nur einem Jahr der Export vervielfacht werden (Grafik unten links). 
-So stieg der verkauf der Produkte im Ausland ernorm an, wodurch 62% des Exports nur aus ihnen besteht (Grafik unten rechts).
+So stieg der Verkauf der Produkte im Ausland enorm an, wodurch 62% des Exports nur aus ihnen besteht (Grafik unten rechts).
 
-</div>
-
-
-<img src="Wirtschaft1.jpg">
-
-</div>
 
 </div>
 
 
 
+<img src="Wirtschaft1.jpg" alt="Wirtschaft Bild">
 
-<div class="projekt-block">
 
-<h2>Exportdiagramme</h2>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Exportbilder direkt zwischen den Boxen -->
+
 
 <div class="image-row">
 
-<img src="Wirtschaft2.jpg">
 
-<img src="Wirtschaft3.jpg">
+<img src="Wirtschaft2.jpg" alt="Export Grafik 1">
+
+
+<img src="Wirtschaft3.jpg" alt="Export Grafik 2">
+
 
 </div>
 
-</div>
+
+
 
 
 
@@ -280,10 +373,12 @@ So stieg der verkauf der Produkte im Ausland ernorm an, wodurch 62% des Exports 
 <h2>Design</h2>
 
 
+
 <div class="design-stack">
 
 
 <button class="nav-btn" onclick="prevImage()">◀</button>
+
 
 
 <div class="stack-container">
@@ -293,18 +388,23 @@ So stieg der verkauf der Produkte im Ausland ernorm an, wodurch 62% des Exports 
 </div>
 
 
+
 <button class="nav-btn" onclick="nextImage()">▶</button>
 
 
+
 </div>
+
+
 
 
 <p class="image-comment">
 
-Hier ist das aktuelle Desigm des Geldes, und wie es sich von der ursprünglichen Skizze geändert hat, es wird
-noch weiterentwickelt
+Hier ist das aktuelle Design des Geldes, und wie es sich von der ursprünglichen Skizze geändert hat.
+Es wird noch weiterentwickelt.
 
 </p>
+
 
 
 </div>
@@ -314,10 +414,14 @@ noch weiterentwickelt
 
 
 
-<div class="projekt-block">
+
+
+
+<div class="calculator-box">
 
 
 <h2>Währungsrechner</h2>
+
 
 
 <div class="calc-row">
@@ -334,7 +438,9 @@ KDM
 </div>
 
 
+
 <div>→</div>
+
 
 
 <select id="currency">
@@ -348,16 +454,23 @@ KDM
 </select>
 
 
+
 <div>=</div>
+
 
 
 <input type="text" id="result" readonly>
 
 
+
 </div>
 
 
+
 </div>
+
+
+
 
 
 
@@ -369,7 +482,11 @@ Zurück
 </div>
 
 
+
+
+
 </div>
+
 
 
 
@@ -378,7 +495,6 @@ Zurück
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
 
 
 const kdmInput=document.getElementById("kdm");
@@ -386,9 +502,12 @@ const currencySelect=document.getElementById("currency");
 const resultInput=document.getElementById("result");
 
 
+
 function calculate(){
 
-const kdm=parseFloat(kdmInput.value);
+
+let kdm=parseFloat(kdmInput.value);
+
 
 
 if(isNaN(kdm)){
@@ -399,43 +518,60 @@ return;
 }
 
 
-let result=0;
+
+let result;
 
 
-if(currencySelect.value==="chf"){
+
+if(currencySelect.value=="chf"){
 
 result=kdm*1.02;
 
 }
 
-else if(currencySelect.value==="usd"){
+else if(currencySelect.value=="usd"){
 
 result=kdm*3.53;
 
 }
 
-else if(currencySelect.value==="eur"){
+else {
 
 result=kdm*1.78;
 
 }
 
 
+
 resultInput.value=result.toFixed(2);
+
 
 
 }
 
 
+
 kdmInput.addEventListener("input",calculate);
+
 currencySelect.addEventListener("change",calculate);
 
 
 
 
-const images=["Wirtschaft4.jpg","Land9.jpg"];
+
+
+const images=[
+
+"Wirtschaft4.jpg",
+
+"Land9.jpg"
+
+];
+
+
 
 let currentIndex=1;
+
 
 
 const designImage=document.getElementById("designImage");
@@ -444,24 +580,30 @@ const designImage=document.getElementById("designImage");
 
 function updateImage(){
 
+
 designImage.style.opacity=0;
 
 
+
 setTimeout(()=>{
+
 
 designImage.src=images[currentIndex];
 
 designImage.style.opacity=1;
 
 
+
 },150);
+
 
 
 }
 
 
 
-window.prevImage=function(){
+function prevImage(){
+
 
 if(currentIndex>0){
 
@@ -475,7 +617,9 @@ updateImage();
 
 
 
-window.nextImage=function(){
+
+function nextImage(){
+
 
 if(currentIndex<images.length-1){
 
@@ -489,11 +633,10 @@ updateImage();
 
 
 
-});
-
-
 </script>
 
 
+
 </body>
+
 </html>
