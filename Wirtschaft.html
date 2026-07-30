@@ -9,267 +9,179 @@
 
 <style>
 
-
-body {
-
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: black;
-
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    background:white;
+    color:black;
 }
 
-
-
-.page-wrapper {
-
-    width: 1000px;
-    margin: auto;
-    padding: 20px;
-
+.page-wrapper{
+    width:1150px;
+    margin:auto;
+    padding:20px;
 }
 
-
-
-h1 {
-
+h1{
     text-align:center;
     margin-top:40px;
     font-size:40px;
-
 }
 
-
-
-.subtitle {
-
+.subtitle{
     text-align:center;
     color:#555;
     margin-bottom:40px;
-
 }
 
-
-
-
-
-.projekt-block {
-
-    max-width:800px;
+.projekt-block{
+    max-width:1050px;
     margin:40px auto;
-    padding:20px;
+    padding:25px;
     background:#f0f0f0;
     border-radius:10px;
     text-align:center;
-
 }
 
+/* ========================= */
+/* Wirtschaft Text + Bild */
+/* ========================= */
 
-
-.projekt-block h2 {
-
-    margin-top:0;
-
-}
-
-
-
-
-
-/* Wirtschaft Text + grosses Bild */
-
-
-.content-row {
-
+.content-row{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:30px;
-
+    gap:35px;
 }
 
-
-
-.textbox {
-
-    width:400px;
+.textbox{
+    width:520px;
+    min-height:420px;
     background:white;
-    padding:20px;
+    padding:25px;
     border-radius:10px;
     text-align:left;
-    line-height:1.5;
-
+    line-height:1.6;
+    box-sizing:border-box;
 }
 
-
-
-.content-row img {
-
-    width:450px;
-    height:450px;
-    object-fit:cover;
+.content-row img{
+    width:420px;
+    height:420px;
+    object-fit:contain;      /* GANZES Bild sichtbar */
+    background:white;
     border-radius:10px;
-
 }
 
+/* ========================= */
+/* Exportgrafiken */
+/* ========================= */
 
-
-
-
-/* Exportdiagramme */
-
-
-.image-row {
-
+.image-row{
     display:flex;
     justify-content:center;
     gap:40px;
-    margin:50px auto;
-
+    margin:20px auto 40px auto;   /* näher an obere Box */
 }
 
-
-
-.image-row img {
-
+.image-row img{
     width:400px;
     height:400px;
     object-fit:contain;
-
 }
 
+/* ========================= */
+/* Design */
+/* ========================= */
 
-
-
-
-
-
-/* Design Bereich kleiner */
-
-
-.design-stack {
-
+.design-stack{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:25px;
-
 }
 
-
-
-.stack-container {
-
+.stack-container{
     width:420px;
     height:420px;
-
 }
 
-
-
-.stack-container img {
-
+.stack-container img{
     width:420px;
     height:420px;
     object-fit:contain;
     border-radius:10px;
-    transition:opacity 0.3s;
-
+    transition:opacity .3s;
 }
 
-
-
-.nav-btn {
-
+.nav-btn{
     font-size:25px;
     padding:10px 15px;
     cursor:pointer;
     border:1px solid #ccc;
     background:white;
     border-radius:10px;
-
 }
 
-
-
-.nav-btn:hover {
-
+.nav-btn:hover{
     background:#eee;
-
 }
 
-
-
-
-.image-comment {
-
+.image-comment{
     color:#555;
     margin-top:30px;
-
 }
 
+/* ========================= */
+/* Währungsrechner */
+/* ========================= */
 
-
-
-
-
-
-/* Währungsrechner grösser */
-
-
-.calculator-box {
-
-    width:600px;
+.calculator-box{
+    width:650px;
     margin:50px auto;
-    padding:35px;
+    padding:30px;
     background:#f0f0f0;
     border-radius:10px;
     text-align:center;
-
+    box-sizing:border-box;
 }
 
-
-
-.calculator-box h2 {
-
-    margin-top:0;
-
-}
-
-
-
-.calc-row {
-
+.calc-row{
     display:flex;
     justify-content:center;
+    align-items:flex-end;
+    gap:18px;
+    flex-wrap:wrap;      /* verhindert, dass etwas herausragt */
+}
+
+.calc-row div{
+    display:flex;
+    flex-direction:column;
     align-items:center;
-    gap:20px;
-
+    gap:8px;
 }
 
-
-
-input, select {
-
+.calc-row input,
+.calc-row select{
+    width:150px;
     padding:10px;
-    border-radius:5px;
-    border:1px solid #ccc;
     font-size:16px;
-
+    border:1px solid #ccc;
+    border-radius:6px;
+    box-sizing:border-box;
 }
 
+.calculator-box h2{
+    margin-top:0;
+    margin-bottom:25px;
+}
 
+/* ========================= */
+/* Zurück */
+/* ========================= */
 
-
-
-
-
-/* Zurück Button */
-
-
-.back-box {
-
+.back-box{
     width:120px;
     margin:40px auto;
     padding:10px;
@@ -277,132 +189,55 @@ input, select {
     background:#f0f0f0;
     border-radius:10px;
     cursor:pointer;
-
 }
 
-
-
-.back-box:hover {
-
+.back-box:hover{
     background:#ddd;
-
 }
-
-
 
 </style>
 
 </head>
 
-
-
 <body>
 
-
 <div class="page-wrapper">
-
-
-
 <h1>Wirtschaft</h1>
-
-
 <p class="subtitle">
 Die Wirtschaft von Kardemon...? Also im Grunde genommen Geld.
 </p>
 
-
-
-
-
-
 <div class="projekt-block">
-
-
 <h2>Über die Wirtschaft</h2>
-
-
-
 <div class="content-row">
-
-
 <div class="textbox">
-
-
 Die Wirtschaft ist ein sehr zentraler Teil des Landes Kardemon, da es als eines der reichsten Länder
 der Welt zählt. Die Währung nennt sich Kademolien, abgekürzt kdm. Bei aktuellem Stand am 11.02.2026 steht sie mit einem Markwert von 1 kdm = 3.53 USD, wodurch 
 die Währung im globalen Handel sehr stabil ist, was vor allem auf den starken Export von Kardemon zurückzuführen ist. Der grösste Export von Kardemon sind Kardamomkerne
 (hmm) und Sturmgewehre. Obwohl der Export der beiden Produkte vorerst gering war, konnte nach nur einem Jahr der Export vervielfacht werden (Grafik unten links). 
 So stieg der Verkauf der Produkte im Ausland enorm an, wodurch 62% des Exports nur aus ihnen besteht (Grafik unten rechts).
-
-
 </div>
-
-
 
 <img src="Wirtschaft1.jpg" alt="Wirtschaft Bild">
-
-
 </div>
-
-
 </div>
-
-
-
-
-
-
-
 
 <div class="image-row">
-
-
 <img src="Wirtschaft2.jpg" alt="Export Grafik 1">
-
-
 <img src="Wirtschaft3.jpg" alt="Export Grafik 2">
-
-
 </div>
-
-
-
-
-
-
-
-
 
 <div class="projekt-block">
-
-
 <h2>Design</h2>
-
-
-
 <div class="design-stack">
-
-
 <button class="nav-btn" onclick="prevImage()">◀</button>
-
-
-
 <div class="stack-container">
-
 <img id="designImage" src="Land9.jpg">
-
 </div>
-
-
 
 <button class="nav-btn" onclick="nextImage()">▶</button>
 
-
-
 </div>
-
-
-
 
 <p class="image-comment">
 
@@ -411,164 +246,73 @@ Es wird noch weiterentwickelt.
 
 </p>
 
-
-
 </div>
-
-
-
-
-
-
-
-
 
 <div class="calculator-box">
 
+    <h2>Währungsrechner</h2>
 
-<h2>Währungsrechner</h2>
+    <div class="calc-row">
 
+        <div>
+            <label>KDM</label>
+            <input type="number" id="kdm" placeholder="0">
+        </div>
 
+        <div style="font-size:24px;">→</div>
 
-<div class="calc-row">
+        <div>
+            <label>Währung</label>
+            <select id="currency">
+                <option value="eur">Euro</option>
+                <option value="chf">Schweizer Franken</option>
+                <option value="usd">US-Dollar</option>
+            </select>
+        </div>
 
+        <div style="font-size:24px;">=</div>
 
-<div>
+        <div>
+            <label>Ergebnis</label>
+            <input type="text" id="result" readonly>
+        </div>
 
-KDM
-
-<br>
-
-<input type="number" id="kdm" placeholder="0">
-
-</div>
-
-
-
-<div>→</div>
-
-
-
-<select id="currency">
-
-<option value="eur">Euro</option>
-
-<option value="chf">Schweizer Franken</option>
-
-<option value="usd">US-Dollar</option>
-
-</select>
-
-
-
-<div>=</div>
-
-
-
-<input type="text" id="result" readonly>
-
-
+    </div>
 
 </div>
-
-
-
-</div>
-
-
-
-
-
-
-
 
 <div class="back-box" onclick="window.location.href='Land.html'">
 
 Zurück
 
 </div>
-
-
-
-
-
 </div>
 
-
-
-
-
-
-
-
-
 <script>
-
-
 const kdmInput=document.getElementById("kdm");
 const currencySelect=document.getElementById("currency");
 const resultInput=document.getElementById("result");
-
-
-
 function calculate(){
-
-
 let kdm=parseFloat(kdmInput.value);
-
-
-
 if(isNaN(kdm)){
-
 resultInput.value="";
 return;
-
 }
-
-
-
 let result;
-
-
-
 if(currencySelect.value=="chf"){
-
 result=kdm*1.02;
-
 }
-
 else if(currencySelect.value=="usd"){
-
 result=kdm*3.53;
-
 }
-
 else {
-
 result=kdm*1.78;
-
 }
-
-
-
 resultInput.value=result.toFixed(2);
-
-
-
 }
-
-
-
 kdmInput.addEventListener("input",calculate);
 
 currencySelect.addEventListener("change",calculate);
-
-
-
-
-
-
-
 const images=[
 
 "Wirtschaft4.jpg",
@@ -576,75 +320,27 @@ const images=[
 "Land9.jpg"
 
 ];
-
-
-
 let currentIndex=1;
-
-
-
 const designImage=document.getElementById("designImage");
-
-
-
 function updateImage(){
-
-
 designImage.style.opacity=0;
-
-
-
 setTimeout(()=>{
-
-
 designImage.src=images[currentIndex];
-
 designImage.style.opacity=1;
-
-
-
 },150);
-
-
-
 }
-
-
-
 function prevImage(){
-
-
 if(currentIndex>0){
-
 currentIndex--;
-
 updateImage();
-
 }
-
 }
-
-
-
-
 function nextImage(){
-
-
 if(currentIndex<images.length-1){
-
 currentIndex++;
-
 updateImage();
-
 }
-
 }
-
-
-
 </script>
-
-
 </body>
-
 </html>
