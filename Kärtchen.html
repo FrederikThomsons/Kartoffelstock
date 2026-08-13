@@ -325,6 +325,78 @@
         
     </script>
 
+
+     <div class="bild-container">
+        <div class="navigation">
+            <button id="prevButton" style="visibility: hidden;"></button>
+            <button id="nextButton"></button>
+        </div>
+        <img id="bild" src="q1.jpg" alt="Bild 1">
+        <div class="bild-text" id="bildText">Das ist das erste Bild (q1.jpg).</div>
+    </div>
+
+    <script>
+        // Bild Navigation mit individuellen Texten
+        const bilder = [
+            { src: 'kärtchen2_13.jpg', text: 'Yep, es gibt jetzt Kärtchen 2, ist das nicht fantastisch?' },
+            { src: 'kärtchen2_14.jpg', text: '' },
+            { src: 'kärtchen2_4.jpg', text: '' },
+            { src: 'kärtchen2_7.jpg', text: '' },
+            { src: 'kärtchen2_9.jpg', text: '' },
+            { src: 'kärtchen2_1.jpg', text: '' },
+            { src: 'kärtchen2_5.jpg', text: '' },
+            { src: 'kärtchen2_6.jpg', text: '' },
+            { src: 'kärtchen2_2.jpg', text: '' },
+            { src: 'kärtchen2_8.jpg', text: '' },
+            { src: 'kärtchen2_3.jpg', text: '' },
+            { src: 'kärtchen2_10.jpg', text: '' },
+            { src: 'kärtchen2_11.jpg', text: '' },
+            { src: 'kärtchen2_12.jpg', text: '' },
+        ];
+
+        let aktuellerIndex = 0;
+
+        const bildElement = document.getElementById("bild");
+        const textElement = document.getElementById("bildText");
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+
+        function updateBild() {
+            bildElement.src = bilder[aktuellerIndex].src;
+            textElement.innerHTML = bilder[aktuellerIndex].text;
+
+
+            // Pfeile sichtbar oder unsichtbar machen
+            prevButton.style.visibility = aktuellerIndex === 0 ? "hidden" : "visible";
+            nextButton.style.visibility = aktuellerIndex === bilder.length - 1 ? "hidden" : "visible";
+        }
+
+        prevButton.addEventListener("click", () => {
+            if (aktuellerIndex > 0) {
+                aktuellerIndex--;
+                updateBild();
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            if (aktuellerIndex < bilder.length - 1) {
+                aktuellerIndex++;
+                updateBild();
+            }
+        });
+
+        function showInfo(id) {
+            const infos = document.querySelectorAll('.info');
+            infos.forEach(info => info.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        // Initiales Bild anzeigen
+        updateBild();
+
+        
+    </script>
+   
 </body>
 
 </html>
